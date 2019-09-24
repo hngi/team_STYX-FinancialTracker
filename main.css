@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* SignIn and SignUp pages*/
 body{
     margin: 0;
@@ -67,3 +68,178 @@ button:focus{
     border-radius: 0;
     color: white;
 }
+=======
+
+#particles-js{
+  margin: 0;
+  padding: 0;
+  font-family: Arial Rounded MT;
+  width: 100%;
+  height: 100vh;
+/*  background-color: rgba(99, 114, 193, 0.3);*/
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+    z-index: 1;
+}
+@keyframes mybg {
+    0%   {background: rgba(155, 132, 6, 0.3);}
+    25%  {background: rgba(132, 198, 142, 0.3);}
+    50%  {background: rgba(99, 114, 193, 0.3);}
+    75%  {background: rgba(246, 252, 253, 0.3);}
+    100%  {background: rgba(0, 0, 0, 0.3);}
+}
+
+body::before{
+    
+    width: 100%;
+    display: block;
+    position: absolute;
+/*
+    top: 0;
+    left: 0;
+*/
+    z-index: -1;
+    content: "";
+    
+    animation: mybg 20s infinite;
+    transition: easeInOut 3s;
+}
+.container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    outline: none;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    border-radius: 5px;    
+}
+.typewrite {
+    font-size: 45px;
+    text-decoration: none;
+    cursor: none;
+    color: #008000;
+    font-family: Franklin Gothic Heavy;
+}
+
+.msg_field {
+    text-align: center;
+}
+
+.box {
+    background: #123;
+    padding: 15%;
+}
+.box h4 {
+    
+}
+.box .inputbox {
+    position: relative;
+}
+.box .inputbox input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    outline: none;
+    background: transparent;
+    
+}
+.inputbox  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 15px;
+    color: #b2a7a7;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.box .inputbox input:focus + label,
+.box .inputbox input:valid + label {
+    font-weight: bold;
+    top: -14px;
+    left: 0;
+    color: #fff;
+    font-size: 12px;
+    background: #008000;
+    padding: 2px 6px;
+}
+.inputbox span {
+    position: relative;
+    margin: -40px 0 20px 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    background: #555;
+    width: 100%;
+    height: 1px;
+}
+.inputbox span:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00b0ff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.7s ease-in-out;
+}
+.box .inputbox input:focus ~ span:before,
+.box .inputbox input:valid ~ span:before {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+.box input[type="submit"] {
+    background: green;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 7px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    margin-top: 35px;
+}
+#link {
+    margin-top: 8px;
+    color: #fff;
+    font-size: 13px;
+}
+#link a {
+    color: #008000;
+    text-decoration: none;
+}
+
+@media (max-width: 840px) {
+    .container {
+        height: 80%;
+        display: grid;
+        grid-template-columns: 1fr;
+        background: #123;
+    }
+    .box {
+        background: #123;
+/*        margin-top: -29px;*/
+/*        height: 180%;*/
+    }
+    .msg_field {
+/*        grid-column: 0/0;*/
+        height: 0px;
+        
+    }
+    
+}
+>>>>>>> c3ca13eab710ef4b00288c09f6fc494f116953b1
