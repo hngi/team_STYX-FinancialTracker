@@ -1,0 +1,126 @@
+.leftside, .rightside {
+    height:100vh ;
+    width: 100%
+}
+
+@media screen and (min-width:768)
+{
+
+    .rightside, .leftside {
+        height: 100vh;
+    }
+}
+
+.leftside {
+    background-color: white;
+}
+
+.rightside {
+    background-color: #032D56;
+}
+
+input[type=email], input[type=password], input[type=text] {
+    width: 548px;
+    height: 55px;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: block;
+    border: 1.5px solid white;
+    background: none;
+    color: #FFFFFF;
+    font-size: 25px;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+    background-color: none;
+    outline: none;
+  }
+  
+  label {
+      font-family: Quicksand;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 21px;
+      line-height: 26px;
+      color: #FFFFFF;
+  }
+  
+  /* Set a style for button */
+  button {
+    background-color: #008D1F;
+    color: #FFFFFF;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    box-shadow: 0px 4px 4px rgba(14, 111, 47, 0.25);
+  }
+  
+  button:hover {
+    opacity:1;
+  }
+  
+  .signupbtn {
+      width: 100%;
+  }
+  p {
+      text-align: center;
+      font-family: Quicksand;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 21px;
+      line-height: 26px;
+      color: #FFFFFF
+  }
+  p a {
+      color: #008D1F;
+  }
+
+  p a:hover {
+      color: #008D1F;
+  }
+
+  .header {
+      position: absolute;
+      bottom: 550px;
+  }
+
+  .head {
+    width: 329px;
+    height: 31px;
+    left: 200px;
+    
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 31px;
+    display: flex;
+    align-items: center;
+    
+    color: #032D56;
+  }
+
+  .head1 {
+    width: 506px;
+    height: 26px;
+    left: 80px;
+    top: 292px;
+    
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    
+    color: #303030;
+  }
+
+  .sytx-img {
+      
+  }
+
