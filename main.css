@@ -19,6 +19,7 @@ body{
 .abs{
     position: fixed;
     top: 5vh
+    color: white;
 }
 .main{
     background: #071739;
