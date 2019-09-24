@@ -1,3 +1,4 @@
+/* SignIn and SignUp pages*/
 body{
     margin: 0;
     padding: 0;
@@ -5,11 +6,22 @@ body{
     color: white;
 }
 .vec{
-    padding: 20vh 5%;
+    padding: 17vh 5%;
+    margin: auto;
+}
+.vec>h5{
+    color: #071739;
+}
+.vec>p{
+    color: #303030;
+}
+.abs{
+    position: fixed;
+    top: 5vh
 }
 .main{
     background: #071739;
-    padding: 18vh 5%;
+    padding: 17vh 5%;
     height:100vh;
 }
 @media screen and (max-width:768px){
@@ -45,7 +57,13 @@ button{
 }
 a.signUpLink{
     color: #008D1F;
+    text-decoration: underline;
 }
 button:focus{
     outline: none;  
+}
+.input-group-text{
+    background: #071739;
+    border-radius: 0;
+    color: white;
 }

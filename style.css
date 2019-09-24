@@ -1,275 +1,275 @@
-    * {
-        box-sizing: border-box;
-    }
-    .wrapper {
-        width: 1200px;
-        display: grid;
-        grid-template-columns: 3fr 9fr;
-        margin: 10vh auto;
-        border: 1px solid green;
-        font-size: 1.2em;
-    }
+* {
+    box-sizing: border-box;
+}
+.wrapper {
+    width: 1200px;
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+    margin: 10vh auto;
+    border: 1px solid green;
+    font-size: 1.2em;
+}
 
-    .sideBar {
-        width: 100%;
-        height: auto;
-        padding: 20px 10px;
-        background-color: rgba(252, 245, 245, 0.699);
-    }
+.sideBar {
+    width: 100%;
+    height: auto;
+    padding: 20px 10px;
+    background-color: rgba(252, 245, 245, 0.699);
+}
 
-    .sideBar * {
-        margin: 0;
-    }
+.sideBar * {
+    margin: 0;
+}
 
-    .navBar {
-        width: 25px;
-        height: 25px;
-        float: left;
-    }
+.navBar {
+    width: 25px;
+    height: 25px;
+    float: left;
+}
 
-    .navButton {
-        width: 20px;
-        height: 2px;
-        margin-bottom: 3px;
-        background-color: black;
-    }
+.navButton {
+    width: 20px;
+    height: 2px;
+    margin-bottom: 3px;
+    background-color: black;
+}
 
-    .navButton:nth-child(2){
-        width: 15px;
-    }
-    .navButton:nth-child(3){
-        width: 10px;
-    }
+.navButton:nth-child(2){
+    width: 15px;
+}
+.navButton:nth-child(3){
+    width: 10px;
+}
 
-    .sideBar article:nth-child(2){
-        float: left;
-        padding-left: 10px;    
-    }
+.sideBar article:nth-child(2){
+    float: left;
+    padding-left: 10px;    
+}
 
-    .dCard {
-        clear: both;
-        margin-top: 40px;
-        padding: 5px;
-    }
+.dCard {
+    clear: both;
+    margin-top: 40px;
+    padding: 5px;
+}
 
-    .dCard > p:first-child {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+.dCard > p:first-child {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
-    }
+}
 
-    .dCard p:first-child a{
-        text-align: right;
-        text-decoration: none;
-        cursor: pointer;
-    }
+.dCard p:first-child a{
+    text-align: right;
+    text-decoration: none;
+    cursor: pointer;
+}
 
-    #debitCard {
-        background-color: rgb(2, 2, 59);
-        border: none;
-        margin-top: 5px;
-        border-radius: 5px;
-        color: white;
-        padding: 10px;
-        position: relative;
-        height: 120px;
-    }   
+#debitCard {
+    background-color: rgb(2, 2, 59);
+    border: none;
+    margin-top: 5px;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    position: relative;
+    height: 120px;
+}   
 
-    #debitCard .cardCircle:first-of-type {
-        width: 40px;
-        height: 40px;
-        border: none;
-        background-color: burlywood;
-        border-radius: 50%;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-    }
+#debitCard .cardCircle:first-of-type {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: burlywood;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
 
-    #debitCard .cardCircle:last-of-type {
-        width: 40px;
-        height: 40px;
-        border: none;
-        background-color: rgb(9, 85, 110);
-        border-radius: 50%;
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
-    }
+#debitCard .cardCircle:last-of-type {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: rgb(9, 85, 110);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
 
-    #debitCard span:first-of-type {
-        position: absolute;
-        left: 15px;
-        top: 10px;
-        opacity: .8;
-    }
-    #debitCard span:last-of-type {
-        position: absolute;
-        right: 20px;
-        bottom: 10px;
-    }
-
-
-    .expenses {
-        margin-top: 10px;
-        
-    }
-
-    .expenses p:first-of-type {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        padding: 5px;
-    }
-
-    .expenses p:nth-child(2) {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        padding: 5px;
-        margin-bottom: 20px;
-    }
-
-    .expenses p:nth-child(2) span:last-of-type select {
-         background-color: green;
-         text-align: right;
-         color: white;
-         padding-right: 10px;
-    }
-
-    .expenses p:nth-child(2) span:last-of-type select:hover {
-        color: black;
-        background-color: white;
-    }
-
-    .expenseItems {
-        border-bottom: 1px solid grey;
-        display: grid;
-        padding: 10px 5px 10px 5px;
-        grid-template-columns: 1fr 3fr 2fr;
-        font-size: .8em;
-        text-align: center;
-    }
-
-    .expenseItems img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        margin-left: 0;
-        padding-top: 0;
-    }
+#debitCard span:first-of-type {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    opacity: .8;
+}
+#debitCard span:last-of-type {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
 
 
-    main {
-        padding: 30px;
-    }
+.expenses {
+    margin-top: 10px;
+    
+}
 
-    .header {
-        width: 90%;
-        height: 40px;
-        display: grid;
-        grid-template-columns: 4fr 4fr;
-        margin-bottom: 50px;
-    }
+.expenses p:first-of-type {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 5px;
+}
 
-    .header input {
-        border: none;
-        height: 40px;
-        width: 100%;        
-        background-color: rgba(241, 237, 237, 0.699);
-        padding: 10px;
-        color: black;
+.expenses p:nth-child(2) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 5px;
+    margin-bottom: 20px;
+}
 
-    }
+.expenses p:nth-child(2) span:last-of-type select {
+     background-color: green;
+     text-align: right;
+     color: white;
+     padding-right: 10px;
+}
 
-    .header article {
-        width: 100%;
-        margin-left: 100px;
-        font-weight: bolder;
-        font-size: 1.1em;
-    }
+.expenses p:nth-child(2) span:last-of-type select:hover {
+    color: black;
+    background-color: white;
+}
+
+.expenseItems {
+    border-bottom: 1px solid grey;
+    display: grid;
+    padding: 10px 5px 10px 5px;
+    grid-template-columns: 1fr 3fr 2fr;
+    font-size: .8em;
+    text-align: center;
+}
+
+.expenseItems img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 0;
+    padding-top: 0;
+}
 
 
-    .header img {
-        height: 50px;
-        width: 50px;
-        margin-left: 20px;
-        border-radius: 50%;
-    }
+main {
+    padding: 30px;
+}
 
-    .goal {
-        width: 80%;
-        background-color: rgba(241, 237, 237, 0.699);
-        display: grid;
-        grid-template-columns: 6fr 3fr;
-        border-radius: 30px;
-    }
+.header {
+    width: 90%;
+    height: 40px;
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+    margin-bottom: 50px;
+}
 
-    .goal section:first-of-type {
-        padding: 20px;
-        padding-top: 30px;
-    }
+.header input {
+    border: none;
+    height: 40px;
+    width: 100%;        
+    background-color: rgba(241, 237, 237, 0.699);
+    padding: 10px;
+    color: black;
 
-    .goal section:last-of-type {
-        padding: 20px;
-        padding-top: 30px;
-        border-left: 1px solid grey;
-        font-size: .8em;
-    }
+}
 
-    .goal section:first-of-type p:first-of-type {
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-        margin-bottom: 20px;
-    }
+.header article {
+    width: 100%;
+    margin-left: 100px;
+    font-weight: bolder;
+    font-size: 1.1em;
+}
 
-    .goal section:first-of-type p:first-of-type span:first-of-type {
-        font-weight: bolder;
-    }
 
-    .goal section:first-of-type p a {
-        text-align: right;
-        color: grey;
-        cursor: pointer;
-        text-decoration: none;
-    }
+.header img {
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
+    border-radius: 50%;
+}
 
-    .goal section:first-of-type p:nth-last-child(2){
-        display: grid;
-        grid-template-columns: 6fr 1fr;
-    }
+.goal {
+    width: 80%;
+    background-color: rgba(241, 237, 237, 0.699);
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+    border-radius: 30px;
+}
 
-    .goal .statusBarDigit {
-        color: orange;
-        font-weight: bolder;
-    }
+.goal section:first-of-type {
+    padding: 20px;
+    padding-top: 30px;
+}
 
-    .goal .progress-bar {
-        background-color:sandybrown;
-        border-radius: 50px;
-    }
+.goal section:last-of-type {
+    padding: 20px;
+    padding-top: 30px;
+    border-left: 1px solid grey;
+    font-size: .8em;
+}
 
-    .statistics {
-        width: 75%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
+.goal section:first-of-type p:first-of-type {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin-bottom: 20px;
+}
 
-    .statistics .expensesStatistics, .statistics .moneyStatistics {
-        background-color: rgba(241, 237, 237, 0.699);
-        border-radius: 20px;
-        margin: 20px;
-        height: 200px;
-        padding: 20px;
-    }
+.goal section:first-of-type p:first-of-type span:first-of-type {
+    font-weight: bolder;
+}
 
-    .statistics .moneyStatistics a {
-        color: black;
-        text-decoration: none;
-        margin-right: 10px;
-        font-size: .9em;
-    }
+.goal section:first-of-type p a {
+    text-align: right;
+    color: grey;
+    cursor: pointer;
+    text-decoration: none;
+}
 
-    .active {
-        border-bottom: 1px solid lightsalmon;
-        color: white;
-    }
+.goal section:first-of-type p:nth-last-child(2){
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+}
+
+.goal .statusBarDigit {
+    color: orange;
+    font-weight: bolder;
+}
+
+.goal .progress-bar {
+    background-color:sandybrown;
+    border-radius: 50px;
+}
+
+.statistics {
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.statistics .expensesStatistics, .statistics .moneyStatistics {
+    background-color: rgba(241, 237, 237, 0.699);
+    border-radius: 20px;
+    margin: 20px;
+    height: 200px;
+    padding: 20px;
+}
+
+.statistics .moneyStatistics a {
+    color: black;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: .9em;
+}
+
+.active {
+    border-bottom: 1px solid lightsalmon;
+    color: white;
+}
