@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <section class="wrapper">
+     <secton class="sideBar">
+        <article class="navBar">
+            <div class="navButton"></div>
+            <div class="navButton"></div>
+            <div class="navButton"></div>
+        </article>
+
+        <article>Dashboard</article>
+
+        <section class="dCard">
+            <p><span>Debit Card</span> <a>Change Card</a></p>
+
+            <section id="debitCard">
+                <span>Master Card <br>* 5900</span>
+                <article class="cardCircle"></article>
+                <article class="cardCircle"></article>
+                <span>&#8358 489,589.00</span>
+            </section>
+
+            <section class="expenses">
+                <p>
+                    <span>All</span>
+                    <span>Income</span>
+                    <span>Spending</span>
+                </p>
+                <p><span>September 2019</span> <span>
+                    <select name="spending" id="spending">
+                        <option value="Sort by">Sort by</option>
+                        <option value="Cars">Cars</option>
+                        <option value="Houses">Houses</option>
+                        <option value="Food">Foods</option>
+                        <option value="Services">Services</option>
+                    </select>
+                </span></p>
+
+                <section class="expenseItems">
+                    <img src="pixhead.png" alt="pix">
+                    <span>Maze Auto <br> Auto and repairs</span>
+                    <span>&#8358 25,000.00</span>
+                </section>
+
+                <section class="expenseItems">
+                    <img src="pixhead.png" alt="pix">
+                    <span>Maze Auto <br> Auto and repairs</span>
+                    <span>&#8358 25,000.00</span>
+                </section>
+                <section class="expenseItems">
+                    <img src="pixhead.png" alt="pix">
+                    <span>Maze Auto <br> Auto and repairs</span>
+                    <span>&#8358 25,000.00</span>
+                </section>
+                
+            </section>
+        </section>
+
+     </secton> 
+
+     <main>
+        <section class="header">
+            <input type="text" name="search" placeholder="Search">
+            <article><span>STYX FINANCE</span> <img src="pixhead.png" alt="pix"></article>
+        </section>
+        <section class="goal">
+            <section>
+            <p><span>Current Goal</span><a href="#">Learn more</a></p>
+            <p>Save money for trip <span class="statusBarDigit">55%</span></p>
+            <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="55"
+                    aria-valuemin="0" aria-valuemax="100" style="width:50%">
+            <span class="sr-only">55% Complete</span>
+            </div>
+            </div>            
+        </section>
+            <section>
+                <p>Goal: &#8358 250,000/ &#8358 550,000</p>
+                <p>Date due: Dec 15, 2019</p>
+                <p>Category: Important</p>
+            </section>
+        </section>
+
+        <section class="statistics">
+            <section class="expensesStatistics">
+                <p>Expenses Statistics</p>
+            </section>
+            <section class="moneyStatistics">
+                <p><a href="#">Daily</a>
+                <a href="#" class="active">Weekly</a>
+                <a href="#">Monthly</a>
+                <a href="#">Yearly</a></p>
+            </section>
+        </section>
+     </main>
+    </section>
+</body>
+</html>
