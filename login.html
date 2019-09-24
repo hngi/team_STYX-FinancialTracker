@@ -4,6 +4,10 @@
         <title>Sign In</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" 
+        href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" 
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" 
+        crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="main.css">
     </head>
@@ -21,25 +25,33 @@
               <form>
                 <div class="form-group mb-4">
                     <label for="email">Email address:</label> 
-                    <input type="text" class="form-control" required>
+                    <input type="text" id="email" class="form-control" required>
                 </div>
-                <div class="form-group mb-4">
-                    <label for="email">Password:</label>
-                    <input type="password" class="form-control" required>
-                </div>
-                <a href="#" class="signUpLink">Forgot Password?</a>
-                <br><br><br>
-                <!--sign in button-->
-                <button type="submit">Sign in</button>
-            </form>
-            <br>
-            <!-- sign up link-->   
-            <p class="text-center">Don't have an account? <a href="signUp.html" class="signUpLink">Sign Up</a></p>
-           </div>
+            
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <div class="input-group">
+                
+                  <input type="password" id="password" class="form-control" data-toggle="password">
+                  <div class="input-group-append">
+                    <span class="input-group-text"><i class="fa fa-eye"></i></span>
+                  </div>
         </div> 
+        <br>
+        <a href="#" class="signUpLink">Forgot Password?</a>
+                <br><br><br>
+         <!--sign in button-->
+         <button type="submit">Sign in</button>
+        </form>
+        <br><br>
+
+        <!-- sign up link-->   
+        <p class="text-center">Don't have an account? <a href="signUp.html" class="signUpLink">Sign Up</a></p>
+       </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/abdo-host/bootstrap-show-password@master/bootstrap-show-password.min.js"></script>
     </body>
 </html>
