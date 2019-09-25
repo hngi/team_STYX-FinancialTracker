@@ -1,0 +1,96 @@
+body {
+    background-color: gainsboro;
+    margin: 0;
+    padding: 0;
+             
+}
+
+.container{
+    width:80%;
+    margin:auto;
+    overflow:hidden;
+  }
+
+  .row1 {
+      margin-left: ;
+  }
+
+  .row1 a {
+      color: black;
+      text-decoration: none;
+      cursor: none;
+  }
+
+.row1 a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #e8491d;
+}  
+  .row2 {
+      background: white;
+      min-height: 600px;
+  }
+
+  .exp-head {
+      padding: 0;
+      border-bottom: 2px solid gainsboro;
+  }
+
+  .exp-head p {
+      font-size: 30px;
+      color: #e8491d;
+      margin: 10px;
+      padding: 5px;
+  }
+
+.exp-info {
+    padding: 5px;
+    margin: 10px;
+}
+
+input[type=date], input[type=text] {
+    width: 97%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: block;
+    border: 1.5px solid white;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[date]:focus, textarea:focus {
+    background-color: #ddd;
+  }
+  
+  label {
+      font-family: Quicksand;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 21px;
+      line-height: 26px;
+      color: #e8491d;
+  }
+  
+textarea {
+    width: 97%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: block;
+    border: 1.5px solid white;
+    background: #f1f1f1;
+    height: 80px;
+}
+
+  button {
+    background-color: #e8491d;
+    color: white;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  button:hover {
+    opacity:1;
+  }
