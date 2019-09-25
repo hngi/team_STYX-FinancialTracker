@@ -8,7 +8,6 @@
         display: grid;
         grid-template-columns: 3fr 9fr;
         margin: 20px auto;
-        border: 1px solid green;
         font-size: 1.2em;
     }
 
@@ -50,8 +49,12 @@
         width: 10px;
     }
 
+    #dashboard {
+        color: #071739;
+    }
+
     .navBarFull {
-        display: none;
+        display: non;
         width: 350px;
         background-color: #071739;
         height: 100vh;
@@ -70,6 +73,11 @@
 
     .navBarFull div span {
         margin-right: 20px;
+        margin-left: 10px;
+    }
+
+    .navBarFull div {
+        cursor: pointer;
     }
 
     .navBarFull div span:hover {
@@ -96,6 +104,28 @@
         margin-right: 20px;
     }
 
+    .accordion {
+        display: grid;
+        grid-template-columns: 11fr 1fr;
+    }
+
+    .accordion span:hover {
+        opacity: .7;
+        cursor: pointer;
+    }
+    .accordion .plusMinus {
+        text-align: right;
+        font-size: .7em;
+        margin-top: 6px;
+        font-weight: lighter;
+        margin-bottom: 20px;
+    }
+
+    .accordion-content {
+        display: none;
+        margin-top: -20px;
+        margin-left: 20px;
+    }
     .sideBar .balance {
         padding: 10px;
     }
@@ -104,46 +134,22 @@
         float: right;
     }
     
-    .expenses {
-        margin-top: 30px;
-        
+    .incomes {
+        margin: 30px 10px;
     }
 
-    .expenses p:first-of-type {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        padding: 5px 2px;
+    .incomes p {
+        margin: 10px 0;
+        background-color: #071739;
+        border-radius: 5px;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        font-size: 1.2em;
     }
 
-    .expenses p:nth-child(2) {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        padding: 5px;
-        margin-bottom: 10px;
-    }
-
-    .expenses p:nth-child(2) span:last-of-type select {
-         background-color: green;
-         text-align: right;
-         color: white;
-         padding-right: 10px;
-    }
-
-    .expenseItems {
-        border-bottom: 1px solid grey;
-        display: grid;
-        padding: 10px 5px 10px 5px;
-        grid-template-columns: 1fr 3fr 2fr;
-        font-size: .8em;
-        text-align: left;
-    }
-
-    .expenseItems img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        margin-left: 0;
-        padding-top: 0;
+    .incomes li {
+        margin: 15px;
     }
 
 
@@ -212,7 +218,7 @@
 
     .addMe {
         border: 0;
-        background-color: green;
+        background-color: #071739;
         color: white;
         padding: 5px 20px;
         font-size: .8em;
