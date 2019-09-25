@@ -23,13 +23,24 @@
         </article>
         <article id="dashboard">Dashboard</article>
         <section class="navBarFull">
-            <div> <span class="fa fa-long-arrow-left"></span>Dashboard</div>
+            <div> <span class="fa fa-dashboard"></span>Dashboard</div>
             <ul>
                 <li> <a href="#"><span class="fa fa-home"> </span>Home</a></li>
-                <li><a href="#"><span class="fa fa-home"> </span>Dashboard</a></li>
-                <li><a href="#"><span class="fa fa-home"> </span>Expenses</a></li>
-                <li><a href="#"><span class="fa fa-help"> </span>Help</a></li>
-                <li><a href="#"><span class="fa fa-home"> </span>Sign Out</a></li>
+                <li class="accordion"><span class="fa fa-database"> &nbsp &nbsp Expenses</span><span class="fa fa-plus plusMinus"></span></li>
+                <ul class="accordion-content">
+                    <li><a href="#"><span class="fa fa-long-arrow-right"></span>Daily Expenses</a></li>
+                    <li><a href="#"><span class="fa fa-long-arrow-right"></span>Monthly Expenses</a></li>
+                    <li><a href="#"><span class="fa fa-long-arrow-right"></span>Yearly Expenses</a></li>
+                </ul>
+                
+                <li class="accordion"><span class="fa fa-database"> &nbsp &nbsp Expenses Report </span><span class="fa fa-plus plusMinus"></span></li>
+                <ul class="accordion-content">
+                    <li><a href="$"><span class="fa fa-long-arrow-right"></span>Datewise Report</a></li>
+                    <li><a href="#"><span class="fa fa-long-arrow-right"></span>Monthwise Report</a></li>
+                    <li><a href="#"><span class="fa fa-long-arrow-right"></span>Yearwise Report</a></li>
+                </ul>
+                <li><a href="#"><span class="fa fa-user"> </span>Profile</a></li>
+                <li><a href="#"><span class="fa fa-sign-out"> </span>Sign Out</a></li>
 
             </ul>
         </section>
@@ -46,23 +57,16 @@
             </p>
         </section>
         
-        <section class="expenses">
-                <p>
-                    <span>All</span>
-                    <span>Income</span>
-                    <span>Spending</span>
-                </p>
-                <p>
-                    <span id="date">September 2019</span> 
-                    <span>
-                    <select name="spending" id="spending">
-                        <option value="Sort by">Sort by</option>
-                        <option value="Cars">Cars</option>
-                        <option value="Houses">Houses</option>
-                        <option value="Food">Foods</option>
-                        <option value="Services">Services</option>
-                    </select>
-                </span></p>
+        <section class="incomes">
+            <p>Recent Incomes</p>
+            <ol>
+                <li>#transaction name </span><span>: &#8358</span></li>
+                <li>#transaction name </span><span>: &#8358</span></li>
+                <li>#transaction name </span><span>: &#8358</span></li>
+                <li>#transaction name </span><span>: &#8358</span></li>
+                <li>#transaction name </span><span>: &#8358</span></li> 
+            </ol>
+              
         </section>
 
 
@@ -90,16 +94,16 @@
             <h3>Add Item</h3>
             <label for="category">Category:</label>
             <select name="category" id="category">
-                    <option value="spending">Spending</option>
-                    <option value="saving">Savings</option>
-                    <option value="Investing">Investing</option>
+                    <option value="spending">Daily</option>
+                    <option value="saving">Monthly</option>
+                    <option value="Investing">Yearly</option>
             </select>            
             <label for="item-name">Item Name:</label>
-            <input type="text" name="item-name" id="itemName">
+            <input type="text" name="item-name" id="itemName" placeholder="Enter transaction name">
             <label for="place">Place:</label>
-            <input type="text" name="place" id="place">
+            <input type="text" name="place" id="place" placeholder="Enter location of transaction">
             <label for="amount">Amount:</label>
-            <input type="number" name="amount" id="amount">
+            <input type="number" name="amount" id="amount" placeholder="Enter the amount">
             <label for="transaction">Type of Transaction:</label>
             <select name="transaction" id="transaction">
                         <option value="spending">Spending</option>
@@ -125,18 +129,12 @@
             <section>
             <section class="expensesStatistics">
                 <p>Expenses Statistics</p>
-                <ul>
-                    <li>Cellular</li>
-                    <li>Auto and Transport</li>
-                    <li>Food and Drinks</li>
-                    <li>Clothings</li>
-                    <li>Utilities and Miscellanous</li>
-                </ul>
+
             </section>
             <section class="savemore">
                 <h3>Discover new features which will help you save more</h3>
                 <a href="#">Learn more</a>
-                <img src="savemore.png" alt="pix" width="100%" height="">
+                <img src="https://res.cloudinary.com/friilancer/image/upload/v1569319677/oggpghesdnwbrsztsvgq.png" alt="pix" width="100%" height="100%">
             </section>
             </section>
             <section>
@@ -252,7 +250,7 @@
         $(".navBarFull").toggle(100)
     })
 
-    $(".navBarFull div span").click(function(){
+    $(".navBarFull div").click(function(){
         $(".navBarFull").toggle(100)
     })
 
@@ -262,6 +260,10 @@
 
     $(".fclose").click(function(){
         $("#addMe-form").toggle(100)
+    })
+
+    $(".accordion").click(function(){
+        $(this).next().slideToggle(100);
     })
     
     </script>
