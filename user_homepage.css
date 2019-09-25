@@ -1,0 +1,364 @@
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    .wrapper {
+        width: 1400px;
+        display: grid;
+        grid-template-columns: 3fr 9fr;
+        margin: 20px auto;
+        border: 1px solid green;
+        font-size: 1.2em;
+    }
+
+    .sideBar {
+        width: 100%;
+        padding: 20px;
+        background-color: whitesmoke;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        margin-bottom: 40px;
+        position: relative;
+    }
+
+    .navBar {
+        width: 30px;
+        height: 25px;
+        padding-top: 5px;
+        display: inline-block;
+    }
+
+    .navBar:hover {
+        opacity: .3;
+    }
+
+    .navButton {
+        width: 25px;
+        height: 2px;
+        margin-bottom: 4px;
+        background-color: black;
+    }
+
+    .navButton:nth-child(2){
+        width: 18px;
+    }
+    .navButton:nth-child(3){
+        width: 10px;
+    }
+
+    .navBarFull {
+        display: none;
+        width: 350px;
+        background-color: #071739;
+        height: 100vh;
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        padding: 30px 20px;
+        color: white;
+    }
+
+    .navBarFull div {
+        margin-bottom: 30px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: lighter;
+    }
+
+    .navBarFull div span {
+        margin-right: 20px;
+    }
+
+    .navBarFull div span:hover {
+    opacity: .6;
+    }
+
+    .navBarFull li {
+        list-style-type: none;        
+        margin-bottom: 20px;
+        margin-left: 10px;
+
+    }
+
+    .navBarFull ul a {
+        color: white;
+    }
+
+    .navBarFull ul a:hover {
+        text-decoration: none;
+        cursor: pointer;
+        opacity: .6;
+    }
+    .navBarFull ul span {
+        margin-right: 20px;
+    }
+
+    .sideBar .balance {
+        padding: 10px;
+    }
+
+    .balance p span:last-of-type {
+        float: right;
+    }
+    
+    .expenses {
+        margin-top: 30px;
+        
+    }
+
+    .expenses p:first-of-type {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 5px 2px;
+    }
+
+    .expenses p:nth-child(2) {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    .expenses p:nth-child(2) span:last-of-type select {
+         background-color: green;
+         text-align: right;
+         color: white;
+         padding-right: 10px;
+    }
+
+    .expenseItems {
+        border-bottom: 1px solid grey;
+        display: grid;
+        padding: 10px 5px 10px 5px;
+        grid-template-columns: 1fr 3fr 2fr;
+        font-size: .8em;
+        text-align: left;
+    }
+
+    .expenseItems img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-left: 0;
+        padding-top: 0;
+    }
+
+
+    main {
+        padding: 30px;
+        background-color: white;
+    }
+
+    .header {
+        width: 90%;
+        height: 40px;
+        display: grid;
+        grid-template-columns: 8fr 4fr;
+        margin-bottom: 30px;
+    }
+
+    .header #search {
+        width: 100%;
+        height: 40px;
+        border: 1px solid grey;
+        display: grid;
+        grid-template-columns: 1fr 10fr;
+
+    }
+    .fa-search{
+        float: left;
+    }
+
+    #search input {
+        float: right;
+    }
+
+    .fa-search {
+        margin: 12px;
+        margin-left: 15px;
+    }
+
+    .header input {
+        border: none;
+        height: 37px;
+        width: 90%;        
+        padding: 17px 0;
+        color: black;
+        outline: none;
+
+    }
+
+    #logo {
+        width: 100%;
+        padding-left: 20px;
+        font-weight: bolder;
+        font-size: 1.1em;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    #logo span:nth-child(2) {
+        margin-left: 40px;
+    }
+
+    .header img {
+        height: 50px;
+        width: 50px;
+        margin-left: 20px;
+        border-radius: 50%;
+    }
+
+    .addMe {
+        border: 0;
+        background-color: green;
+        color: white;
+        padding: 5px 20px;
+        font-size: .8em;
+        font-weight: lighter;
+        font-family: Arial, Helvetica, sans-serif;
+        border-radius: 5px;
+        margin-bottom: 30px;
+    }
+
+    .addMe:hover {
+        opacity: .7;
+    }
+
+    .goal {
+        width: 100%;
+        background-color: rgba(241, 237, 237, 0.699);
+        display: grid;
+        grid-template-columns: 6fr 3fr;
+        border-radius: 20px;
+    }
+
+    .goal #currentGoal{
+        padding: 20px;
+        padding-top: 30px;
+    }
+
+    .goal section:last-child{
+        padding: 20px;
+        padding-top: 30px;
+        border-left: 1px solid grey;
+        font-size: .8em;
+    }
+
+    .goal section:last-child p span {
+        float: right;
+    }
+
+    .goal section:first-of-type p:first-of-type {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        margin-bottom: 20px;
+    }
+
+    .goal section:first-of-type p:first-of-type span:first-of-type {
+        font-weight: bolder;
+    }
+
+    .goal section:first-of-type p a {
+        text-align: right;
+        color: grey;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .goal section:first-of-type p:nth-last-child(2){
+        display: grid;
+        grid-template-columns: 6fr 1fr;
+    }
+
+    .goal .statusBarDigit {
+        color: orange;
+        font-weight: bolder;
+    }
+
+    .goal .progress-bar {
+        background-color:sandybrown;
+        border-radius: 50px;
+    }
+
+    .statistics {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 3fr 4fr;
+    }
+
+    .statistics .expensesStatistics, .statistics .moneyStatistics {
+        background-color: rgba(241, 237, 237, 0.699);
+        border-radius: 20px;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .savemore {
+        border-radius: 20px;
+        border: 1px solid whitesmoke;
+        padding: 10px;
+        background-color: #FBFBFB;
+    }
+
+    .time {
+        color: black;
+        text-decoration: none;
+        margin-right: 20px;
+        font-size: 1.0em;  
+    }
+
+    .time:hover {
+        text-decoration: none;
+        color: green;
+    }
+
+    .active {
+        border-bottom: 1px solid lightsalmon;
+        color: lightsalmon;
+    }
+    #date {
+        margin-top: 10px;
+        font-size: .8em;
+    }
+
+    table {
+        font-size: .8em;
+    }
+
+    table td {
+        border-bottom: 1px solid grey;
+    }
+
+    table tr:first-child td {
+        border: none;
+    }
+
+    table tr td:first-child {
+        text-align: right;
+        padding-right: 20px;
+        border-bottom: none;
+    }
+
+    table tr td {
+        padding: 5px 5px;;
+    }
+
+    .days p {
+        margin: 50px 2px 10px 30px;
+    }
+
+   .foot {
+     padding: 20px 40px;  
+     position: relative;
+   } 
+
+   .foot span {
+       background-color: #E05435;
+       color: white;
+       padding: 15px 20px;
+       position: absolute;
+       right: 10px;
+       top: 40px;
+   }

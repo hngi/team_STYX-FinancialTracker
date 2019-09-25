@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="user_homepage.css">
+    
+</head>
+<body>
+    <section class="wrapper">
+     <secton class="sideBar">
+        <nav>
+        <article class="navBar">
+            <div class="navButton"></div>
+            <div class="navButton"></div>
+            <div class="navButton"></div>
+        </article>
+        <article id="dashboard">Dashboard</article>
+        <section class="navBarFull">
+            <div> <span class="fa fa-long-arrow-left"></span>Dashboard</div>
+            <ul>
+                <li> <a href="#"><span class="fa fa-home"> </span>Home</a></li>
+                <li><a href="#"><span class="fa fa-home"> </span>Dashboard</a></li>
+                <li><a href="#"><span class="fa fa-home"> </span>Expenses</a></li>
+                <li><a href="#"><span class="fa fa-help"> </span>Help</a></li>
+                <li><a href="#"><span class="fa fa-home"> </span>Sign Out</a></li>
+
+            </ul>
+        </section>
+        </nav>
+
+        <section class="balance">
+            <p>
+                <span>Total Balance:</span>
+                <span>&#8358 1,785,657.00</span>
+            </p>
+            <p>
+                <span>Savings:</span>
+                <span>&#8358 315,569.00</span>
+            </p>
+        </section>
+        
+        <section class="expenses">
+                <p>
+                    <span>All</span>
+                    <span>Income</span>
+                    <span>Spending</span>
+                </p>
+                <p>
+                    <span id="date">September 2019</span> 
+                    <span>
+                    <select name="spending" id="spending">
+                        <option value="Sort by">Sort by</option>
+                        <option value="Cars">Cars</option>
+                        <option value="Houses">Houses</option>
+                        <option value="Food">Foods</option>
+                        <option value="Services">Services</option>
+                    </select>
+                </span></p>
+
+                <section class="expenseItems">
+                    <img src="https://res.cloudinary.com/friilancer/image/upload/v1569319677/oggpghesdnwbrsztsvgq.png" alt="pix">
+                    <span><b>Maze Auto</b> <br> Auto and repairs</span>
+                    <span>&#8358 25,000.00</span>
+                </section>
+
+                <section class="expenseItems">
+                    <img src="https://res.cloudinary.com/friilancer/image/upload/v1569319677/oggpghesdnwbrsztsvgq.png" alt="pix">
+                    <span><b>Sillicon Valley</b> <br> Salary</span>
+                    <span>&#8358 265,000.00</span>
+                </section>
+                <section class="expenseItems">
+                    <img src="https://res.cloudinary.com/friilancer/image/upload/v1569319677/oggpghesdnwbrsztsvgq.png" alt="pix">
+                    <span><b>Jikes Dinning</b> <br> Foods and drinks</span>
+                    <span>&#8358 10,000.00</span>
+                </section>
+                <section class="expenseItems">
+                    <img src="https://res.cloudinary.com/friilancer/image/upload/v1569319677/oggpghesdnwbrsztsvgq.png" alt="pix">
+                    <span><b>Netflix</b><br>Tv</span>
+                    <span>&#8358 3,000.00</span>
+                </section>
+                <section class="expenseItems">
+                    <img src="https://res.cloudinary.com/friilancer/image/upload/v1569319677/oggpghesdnwbrsztsvgq.png" alt="pix">
+                    <span><b>Spotify</b> <br> Music</span>
+                    <span>&#8358 50,000.00</span>
+                </section>
+                <section class="expenseItems">
+                    <img src="https://res.cloudinary.com/friilancer/image/upload/v1569319677/oggpghesdnwbrsztsvgq.png" alt="pix">
+                    <span><b>Data</b> <br> Subscription</span>
+                    <span>&#8358 5,000.00</span>
+                </section>
+        </section>
+
+
+     </secton> 
+
+     <main>
+        <section class="header">
+            <span id="search">
+                <span class="fa fa-search"></span>
+                <input type="text" name="search" placeholder="Search">
+            </span>
+            <article id="logo">                
+                <span class="fa fa-bell"></span>
+                <span>STYX FINANCE</span> 
+                <img src="https://res.cloudinary.com/friilancer/image/upload/v1569319677/oggpghesdnwbrsztsvgq.png" alt="user.image">
+            </article>
+        </section>
+        <button class="addMe">Add Item</button>
+
+        <section class="goal">
+            <section id="currentGoal">
+            <p><span>Current Goal</span><a href="#">Learn more</a></p>
+            <p>Save money for trip <span class="statusBarDigit">55%</span></p>
+            <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="55"
+                    aria-valuemin="0" aria-valuemax="100" style="width:55%">
+            <span class="sr-only">55% Complete</span>
+            </div>
+            </div>            
+            </section>
+
+            <section>
+                <p>Goal: <span>&#8358 250,000/ &#8358 550,000</span></p>
+                <p>Date Due: <span>Dec 15, 2019</span></p>
+                <p>Category: <span>Important</span></p>
+            </section>
+        </section>
+
+        <section class="statistics">
+            <section>
+            <section class="expensesStatistics">
+                <p>Expenses Statistics</p>
+                <ul>
+                    <li>Cellular</li>
+                    <li>Auto and Transport</li>
+                    <li>Food and Drinks</li>
+                    <li>Clothings</li>
+                    <li>Utilities and Miscellanous</li>
+                </ul>
+            </section>
+            <section class="savemore">
+                <h3>Discover new features which will help you save more</h3>
+                <a href="#">Learn more</a>
+                <img src="savemore.png" alt="pix" width="100%" height="">
+            </section>
+            </section>
+            <section>
+            <section class="moneyStatistics">
+                <p style="font-weight: bolder">Money Statistics</p>
+                <div>
+                <a href="#" class="time">Daily</a>
+                <a href="#" class="time active">Weekly</a>
+                <a href="#" class="time">Monthly</a>
+                <a href="#" class="time">Yearly</a>
+                </div>
+                <p id="date">September 25, 2019</p>
+                <section class="days">
+                        <table style="width:100%">
+                                <tr>
+                                  <td></td>
+                                  <td>Mon</td>
+                                  <td>Tue</td>
+                                  <td>Wed</td>
+                                  <td class="active">Thur</td>
+                                  <td>Fri</td>
+                                  <td>Sat</td>
+                                  <td>Sun</td>
+                                </tr>
+                                <tr>
+                                  <td>+ &#8358 10k</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>+ &#8358 5k</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>+ &#8358 10k</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>&#8358 0</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td> &#8358 1k</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>- &#8358 5k</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>- &#8358 10k</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                        </table>
+
+                        <p>Total amount spent today: <span>&#8358 9, 789.00</span></p>
+                </section>
+            </section>
+            <section class="foot">
+                <h3>Alert</h3>
+                <p>High Spendings</p>
+                <span>5</span>
+
+            </section>
+            </section>
+        </section>
+     </main>
+    </section>
+
+    <script>
+    $(".navBar").click(function(){
+        $(".navBarFull").toggle(100)
+    })
+
+    $(".navBarFull div span").click(function(){
+        $(".navBarFull").toggle(100)
+    })
+    </script>
+</body>
+</html>
