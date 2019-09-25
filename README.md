@@ -11,10 +11,16 @@ The financial app helps you to track your expenses and keep report of how you ma
 
 For Contributors
 This is team STYX where the projects are been worked on.
-Kindly note: 
+Kindly note:
+
 1.When uploading your work, do so without altering any of the files.
+
 2. Create a pull request if you want your changes to be adopted.
+
 3. Do not delete any of the files on the master or submaster branch unless given permission to do so.
+
 4. Inform the project supervisor if your request is not attended to.
-Thanks
+
 5. Kindly create a fresh branch if you need a clean slate to work with, your works can be adopted from the branch.
+
+Thanks
