@@ -63,38 +63,6 @@
                         <option value="Services">Services</option>
                     </select>
                 </span></p>
-
-                <section class="expenseItems">
-                    <img src="https://res.cloudinary.com/friilancer/image/upload/v1569319677/oggpghesdnwbrsztsvgq.png" alt="pix">
-                    <span><b>Maze Auto</b> <br> Auto and repairs</span>
-                    <span>&#8358 25,000.00</span>
-                </section>
-
-                <section class="expenseItems">
-                    <img src="https://res.cloudinary.com/friilancer/image/upload/v1569319677/oggpghesdnwbrsztsvgq.png" alt="pix">
-                    <span><b>Sillicon Valley</b> <br> Salary</span>
-                    <span>&#8358 265,000.00</span>
-                </section>
-                <section class="expenseItems">
-                    <img src="https://res.cloudinary.com/friilancer/image/upload/v1569319677/oggpghesdnwbrsztsvgq.png" alt="pix">
-                    <span><b>Jikes Dinning</b> <br> Foods and drinks</span>
-                    <span>&#8358 10,000.00</span>
-                </section>
-                <section class="expenseItems">
-                    <img src="https://res.cloudinary.com/friilancer/image/upload/v1569319677/oggpghesdnwbrsztsvgq.png" alt="pix">
-                    <span><b>Netflix</b><br>Tv</span>
-                    <span>&#8358 3,000.00</span>
-                </section>
-                <section class="expenseItems">
-                    <img src="https://res.cloudinary.com/friilancer/image/upload/v1569319677/oggpghesdnwbrsztsvgq.png" alt="pix">
-                    <span><b>Spotify</b> <br> Music</span>
-                    <span>&#8358 50,000.00</span>
-                </section>
-                <section class="expenseItems">
-                    <img src="https://res.cloudinary.com/friilancer/image/upload/v1569319677/oggpghesdnwbrsztsvgq.png" alt="pix">
-                    <span><b>Data</b> <br> Subscription</span>
-                    <span>&#8358 5,000.00</span>
-                </section>
         </section>
 
 
@@ -112,26 +80,46 @@
                 <img src="https://res.cloudinary.com/friilancer/image/upload/v1569319677/oggpghesdnwbrsztsvgq.png" alt="user.image">
             </article>
         </section>
+
+
+        <section>
         <button class="addMe">Add Item</button>
+        <section id="addMe-form">
+        <form action="">            
+            <div class="fclose">&#10005</div>
+            <h3>Add Item</h3>
+            <label for="category">Category:</label>
+            <select name="category" id="category">
+                    <option value="spending">Spending</option>
+                    <option value="saving">Savings</option>
+                    <option value="Investing">Investing</option>
+            </select>            
+            <label for="item-name">Item Name:</label>
+            <input type="text" name="item-name" id="itemName">
+            <label for="place">Place:</label>
+            <input type="text" name="place" id="place">
+            <label for="amount">Amount:</label>
+            <input type="number" name="amount" id="amount">
+            <label for="transaction">Type of Transaction:</label>
+            <select name="transaction" id="transaction">
+                        <option value="spending">Spending</option>
+                        <option value="saving">Savings</option>
+                        <option value="Investing">Investing</option>
+            </select>
+            <article>
+            <span>
+            <label for="date">Date:</label>
+            <input type="date" name="date" id="fdate"></span>
 
-        <section class="goal">
-            <section id="currentGoal">
-            <p><span>Current Goal</span><a href="#">Learn more</a></p>
-            <p>Save money for trip <span class="statusBarDigit">55%</span></p>
-            <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="55"
-                    aria-valuemin="0" aria-valuemax="100" style="width:55%">
-            <span class="sr-only">55% Complete</span>
-            </div>
-            </div>            
-            </section>
-
-            <section>
-                <p>Goal: <span>&#8358 250,000/ &#8358 550,000</span></p>
-                <p>Date Due: <span>Dec 15, 2019</span></p>
-                <p>Category: <span>Important</span></p>
-            </section>
+            <span>
+            <label for="time">Time:</label>
+            <input type="time" name="time" id="ftime"></span>
+            </article>
+            <input type="submit" value="Save" id="save">
+        </form>
         </section>
+        </section>
+
 
         <section class="statistics">
             <section>
@@ -267,6 +255,15 @@
     $(".navBarFull div span").click(function(){
         $(".navBarFull").toggle(100)
     })
+
+    $(".addMe").click(function(){
+        $("#addMe-form").toggle(100)
+    })
+
+    $(".fclose").click(function(){
+        $("#addMe-form").toggle(100)
+    })
+    
     </script>
 </body>
 </html>
