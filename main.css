@@ -78,3 +78,14 @@ button:focus{
 .form-control:valid {
     background-color:  #fefeff!important;
   }
+
+  .subtn:hover{
+    border: 1px solid #0f1e72;
+      color: #fafafd!important;
+      background-color: rgb(58, 173, 83);
+}
+.subtn:active {
+    background-color: rgb(14, 141, 42);
+    box-shadow: 0 5px rgb(12, 11, 51);
+    transform: translateY(4px);
+  }
