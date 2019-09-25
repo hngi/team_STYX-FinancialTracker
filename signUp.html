@@ -22,33 +22,39 @@
             <!--form-->
             <div class="col-12 col-sm-12 col-md-6 main">
               <h4 class="abs">Sign In</h4>
-              <form>
+
+              <form action="register.php" method="POST">
                 <div class="form-group mb-4">
-                    <label for="name">Full Name:</label> 
-                    <input type="text" id="name" class="form-control" required>
+                    <label for="fname">Full Name:</label> 
+                    <input type="text" id="fname" class="form-control" required>
                 </div>
                 <div class="form-group mb-4">
                     <label for="email">Email address:</label> 
-                    
-                    <input type="email" id="email" class="form-control" required>
+                    <input type="email" id="email" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
                 </div>
                 <div class="form-group mb-4">
-                    <label for="number">Number:</label>
+                    <label for="phone">Number:</label>
                     <div class="input-group mb-4">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><span>234</span></span>
                         </div> 
-                            <input type="number" id="number" class="form-control" required>
+                            <input type="number" id="phone" class="form-control" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="password">Password:</label>
                     <div class="input-group">
                 
-                  <input type="password" id="password" class="form-control" data-toggle="password">
+                  <input type="password" id="password" placeholder="at least 6 characters" class="form-control" data-toggle="password" minlength="6" required>
                   <div class="input-group-append">
                     <span class="input-group-text"><i class="fa fa-eye"></i></span>
                   </div>
+                    </div>
+                    <br>
+                  <div class="form-group mb-4">
+                    <label for="cpword">Confirm Password:</label>
+                    <input type="password" id="cpword" class="form-control" minlength="6" required>
+                </div>
                 
                 </div>
                 <br>
@@ -59,7 +65,7 @@
             <!-- sign in link-->
             <p class="text-center">Already have an account? <a href="login.html" class="signUpLink">Sign In</a></p>
            </div>
-        </div> 
+    
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
