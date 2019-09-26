@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Daily Expense Report</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/user_homepage.css">
+    <link rel="stylesheet" href="css/expenses_all.css">
+    
+</head>
+<body>
+    <section class="wrapper">
+     <secton class="sideBar">
+        <nav>
+        <article class="navBar">
+            <div class="navButton"></div>
+            <div class="navButton"></div>
+            <div class="navButton"></div>
+        </article>
+        <article id="dashboard">Dashboard</article>
+        <section class="navBarFull">
+            <div> <span class="fa fa-dashboard"></span>Dashboard</div>
+            <ul>
+                <li> <a href="index.html"><span class="fa fa-home"> </span>Home</a></li>
+                <li class="accordion"><span class="fa fa-database"> &nbsp &nbsp Expenses</span><span class="fa fa-plus plusMinus"></span></li>
+                <ul class="accordion-content">
+                        <li><a href="addExpense.html"><span class="fa fa-long-arrow-right"></span>Datewise Report</a></li>
+                        <li><a href="addExpense.html"><span class="fa fa-long-arrow-right"></span>Monthwise Report</a></li>
+                        <li><a href="addExpense.html"><span class="fa fa-long-arrow-right"></span>Yearwise Report</a></li>
+                </ul>
+                
+                <li class="accordion"><span class="fa fa-database"> &nbsp &nbsp Expenses Report </span><span class="fa fa-plus plusMinus"></span></li>
+                <ul class="accordion-content">
+                   <li><a href="expenses_dailyReport.html"><span class="fa fa-long-arrow-right"></span>Datewise Report</a></li>
+                        <li><a href="expenses_monthly_report.html"><span class="fa fa-long-arrow-right"></span>Monthwise Report</a></li>
+                        <li><a href="expenses_yearly_report.html"><span class="fa fa-long-arrow-right"></span>Yearwise Report</a></li>
+                </ul>
+                <li><a href="#"><span class="fa fa-user"> </span>Profile</a></li>
+                <li><a href="logout.html"><span class="fa fa-sign-out"> </span>Sign Out</a></li>
+
+            </ul>
+        </section>
+        </nav>
+     </secton> 
+
+     <main>
+        <section class="header">
+            <span id="search">
+                <span class="fa fa-search"></span>
+                <input type="text" name="search" placeholder="Search">
+            </span>
+            <article id="logo">                
+                <span class="fa fa-bell"></span>
+                <span>STYX FINANCE</span> 
+                <img src="https://res.cloudinary.com/friilancer/image/upload/v1569319677/oggpghesdnwbrsztsvgq.png" alt="user.image">
+            </article>
+        </section>
+        <section>
+                <table class="table table-borderless">
+                        <p class="mnth">Sat, 21st Sept, 2019</p>
+                        <thead>
+                          <tr>
+                            <th>ITEM(S)</th>
+                            <th>AMOUNT</th>
+                            <th>TIME</th>
+                            <th>DETAILS</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="mb-4">
+                            <td>xxxx</td>
+                            <td>1,500.00</td>
+                            <td>08:00 AM</td>
+                            <td class="btn btn-primary">View</td>
+                          </tr>
+                          <tr>
+                            <td>xxxx</td>
+                            <td>1,500.00</td>
+                            <td>08:00 AM</td>
+                            <td class="btn btn-primary">View</td>
+                          </tr>
+                          <tr>
+                            <td>xxxx</td>
+                            <td>1,500.00</td>
+                            <td>08:00 AM</td>
+                            <td class="btn btn-primary">View</td>
+                          </tr>
+                          <tr>
+                            <td>xxxx</td>
+                            <td>1,500.00</td>
+                            <td>08:00 AM</td>
+                            <td class="btn btn-primary">View</td>
+                          </tr>
+                          <tr>
+                            <td>Total amount spent</td>
+                            <td>7,500.00</td>
+                          </tr>
+                       </tbody>
+                    </table>
+        </section>
+
+
+       <section class="foot">
+            <h3>Alert</h3>
+            <p>High Spendings</p>
+            <span>5</span>
+        </section>
+     </main>
+    </section>
+
+
+
+    <script>
+    $(".navBar").click(function(){
+        $(".navBarFull").toggle(100)
+    })
+
+    $(".navBarFull div").click(function(){
+        $(".navBarFull").toggle(100)
+    })
+
+    $(".addMe").click(function(){
+        $("#addMe-form").toggle(100)
+    })
+
+    $(".fclose").click(function(){
+        $("#addMe-form").toggle(100)
+    })
+
+    $(".accordion").click(function(){
+        $(this).next().slideToggle(100);
+    })
+    
+    </script>
+</body>
+</html>
