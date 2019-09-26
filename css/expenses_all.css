@@ -1,0 +1,42 @@
+/* started; For general features expenses pages */
+
+.wrapper {
+    background-color: white;
+}
+
+.navBarFull {
+    display: block;
+}
+
+.foot {
+    margin-top: 40px;
+    border: 1px solid grey;
+    width: 250px;
+    float: right;
+}
+
+/*end; for general features */
+
+/* started; for yearly expenses */
+.year {
+    padding: 0 50px;
+}
+.row div {
+    border: 1px solid #071739;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 1px 1px 5px #071739;
+}
+.row p:first-child {
+    background-color: #071739;
+    color: white;
+    padding: 10px;
+}
+
+.row button {
+    border: none;
+    background-color: #071739ab;
+    color: white;
+    padding: 10px 20px;
+}
+/*ended; */

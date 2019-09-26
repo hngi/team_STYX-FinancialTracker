@@ -1,0 +1,471 @@
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: antiquewhite;
+    }
+
+    .wrapper {
+        width: 1400px;
+        display: grid;
+        grid-template-columns: 3fr 9fr;
+        margin: 1vh auto;
+        font-size: 1.2em;
+    }
+
+    .sideBar {
+        width: 100%;
+        padding: 20px;
+        background-color: whitesmoke;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        margin-bottom: 40px;
+        position: relative;
+    }
+
+    .navBar {
+        width: 30px;
+        height: 25px;
+        padding-top: 5px;
+        display: inline-block;
+    }
+
+    .navBar:hover {
+        opacity: .3;
+    }
+
+    .navButton {
+        width: 25px;
+        height: 2px;
+        margin-bottom: 4px;
+        background-color: black;
+    }
+
+    .navButton:nth-child(2){
+        width: 18px;
+    }
+    .navButton:nth-child(3){
+        width: 10px;
+    }
+
+    #dashboard {
+        color: #071739;
+    }
+
+    /* Side NavBar Starts Here */
+
+    .navBarFull {
+        display: none;
+        width: 350px;
+        background-color: #071739;
+        height: auto;
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        padding: 30px 20px;
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .navBarFull div {
+        margin-bottom: 30px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: lighter;
+    }
+
+    .navBarFull div span {
+        margin-right: 20px;
+        margin-left: 10px;
+    }
+
+    .navBarFull div {
+        cursor: pointer;
+    }
+
+    .navBarFull div span:hover {
+    opacity: .6;
+    }
+
+    .navBarFull li {
+        list-style-type: none;        
+        margin-bottom: 20px;
+        margin-left: 10px;
+
+    }
+
+    .navBarFull ul a {
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .navBarFull ul a:hover {
+        text-decoration: none;
+        cursor: pointer;
+        opacity: .6;
+    }
+    .navBarFull ul span {
+        margin-right: 20px;
+    }
+
+    .accordion {
+        display: grid;
+        grid-template-columns: 11fr 1fr;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .accordion span:hover {
+        opacity: .7;
+        cursor: pointer;
+    }
+    .accordion .plusMinus {
+        text-align: right;
+        font-size: .7em;
+        margin-top: 6px;
+        font-weight: lighter;
+        margin-bottom: 20px;
+    }
+
+    .accordion-content {
+        display: none;
+        margin-top: -20px;
+        margin-left: 20px;
+    }
+
+    .accordion {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    /* Side NavBar Ends Here */
+
+    .balance {
+        padding: 10px;
+    }
+
+    .balance p span:last-of-type {
+        float: right;
+    }
+    
+    .incomes {
+        margin: 30px 10px;
+    }
+
+    .incomes p {
+        margin: 10px 0;
+        background-color: #071739;
+        border-radius: 5px;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .incomes li {
+        margin: 15px;
+    }
+
+    /* MAIN PAGE STARTS HERE */
+    main {
+        padding: 30px;
+        background-color: white;
+    }
+
+    .header {
+        width: 90%;
+        height: 40px;
+        display: grid;
+        grid-template-columns: 8fr 4fr;
+        margin-bottom: 30px;
+    }
+
+    .header #search {
+        width: 100%;
+        height: 40px;
+        border: 1px solid grey;
+        display: grid;
+        grid-template-columns: 1fr 10fr;
+
+    }
+    .fa-search{
+        float: left;
+    }
+
+    #search input {
+        float: right;
+    }
+
+    .fa-search {
+        margin: 12px;
+        margin-left: 15px;
+    }
+
+    .header input {
+        border: none;
+        height: 37px;
+        width: 90%;        
+        padding: 17px 0;
+        color: black;
+        outline: none;
+
+    }
+
+    #logo {
+        width: 100%;
+        padding-left: 20px;
+        font-weight: bolder;
+        font-size: 1.1em;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    #logo span:nth-child(2) {
+        margin-left: 40px;
+    }
+
+    .header img {
+        height: 50px;
+        width: 50px;
+        margin-left: 20px;
+        border-radius: 50%;
+    }
+
+    /* ADDITEM FORM STARTS HERE */
+
+    .addMe {
+        border: 0;
+        background-color: #071739;
+        color: white;
+        padding: 5px 20px;
+        font-size: .8em;
+        font-weight: lighter;
+        font-family: Arial, Helvetica, sans-serif;
+        border-radius: 5px;
+        margin-bottom: 30px;
+    }
+
+    .addMe:hover {
+        opacity: .7;
+    }
+
+
+    #addMe-form {
+        display: none;
+        width: 100%;
+        height: 100vh;
+        border: 1px solid grey;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        background-color: rgba(245, 245, 245, 0.918);
+    }
+
+    #addMe-form form {
+        width: 600px;
+        margin: 80px auto;
+        background-color: white;
+        padding: 20px 100px;        
+        font-size: .8em;
+        border: 1px solid wheat;
+
+    }
+
+    form div {
+        float: right;
+        font-size: 1.6em;
+        cursor: pointer;
+    }
+    form h3 {
+        clear: both;
+        font-weight: lighter;
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+
+    form label {
+        width: 100%;
+    }
+
+
+    form input, form select {
+        width: 100%;
+        height: 30px;
+        margin-bottom: 20px;
+        padding-left: 10px;
+    }
+
+    form article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    form article span:first-child {
+        margin-right: 30px;
+    }    
+    form article span:last-child {
+        margin-left: 30px
+    }
+
+    #save {
+        background-color: green;
+        outline: none;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        font-size: 1.2em;
+        margin-top: 40px;
+        padding: 10px;
+        height: auto;
+    }
+
+    #save:hover {
+        opacity: .7;
+    }
+    
+    /* ADDITEM FORM ENDS HERE*/
+
+    /* STATISTICS STARTS HERE */
+    .statistics {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 5fr 3fr;
+    }
+
+    .statistics .eStatistics, .statistics .moneyStatistics {
+        background-color: rgba(241, 237, 237, 0.699);
+        border-radius: 20px;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .eStatistics .ES {
+        background-color: #071739;
+        color: white;
+        width: auto;
+        padding: 10px 20px;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .eStatistics .cat {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 10px 5px;
+    }
+
+    .cat a {
+        background-color: green;
+        color: white;
+        padding: 5px 20px;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+
+    .cat a:hover {
+        color: green;
+        background-color: white;
+        border: .5px solid green;
+        text-decoration: none;
+    }
+
+    .eStatistics button {
+        border: none;
+        background-color: #071739c5;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    .eStatistics button:hover {
+        background-color: #071739;
+    }
+
+/*STARTISTICS ENDS HERE */
+
+
+/*MONEY STATISTICS STARTS HERE */
+
+    .mStatistics{
+        margin-left: 30px;
+        margin-bottom: 50px;
+    }
+    .mStatistics P {
+        color: #071739;
+        font-size: 1.2em;
+    }
+
+    .mStatistics li {
+        padding-left: 15px;
+        margin: 10px 0;
+        font-size: 1.1em;
+    }
+    .savemore {
+        border-radius: 20px;
+        border: 1px solid whitesmoke;
+        padding: 10px;
+        background-color: #FBFBFB;
+    }
+
+    /* .time {
+        color: black;
+        text-decoration: none;
+        margin-right: 20px;
+        font-size: 1.0em;  
+    }
+
+    .time:hover {
+        text-decoration: none;
+        color: green;
+    }
+
+    .active {
+        border-bottom: 1px solid lightsalmon;
+        color: lightsalmon;
+    }
+    #date {
+        margin-top: 10px;
+        font-size: .8em;
+    }
+
+    table {
+        font-size: .8em;
+    }
+
+    table td {
+        border-bottom: 1px solid grey;
+    }
+
+    table tr:first-child td {
+        border: none;
+    }
+
+    table tr td:first-child {
+        text-align: right;
+        padding-right: 20px;
+        border-bottom: none;
+    }
+
+    table tr td {
+        padding: 5px 5px;;
+    }
+
+    .days p {
+        margin: 50px 2px 10px 30px;
+    } */
+
+   .foot {
+     padding: 20px 40px;  
+     position: relative;
+   } 
+
+   .foot span {
+       background-color: #E05435;
+       color: white;
+       padding: 15px 20px;
+       position: absolute;
+       right: 10px;
+       top: 40px;
+   }

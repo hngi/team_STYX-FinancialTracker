@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://res.cloudinary.com/phiileo/image/upload/v1569508320/landingpage_bg_ueoi2e.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*header started here*/
+
+header {
+    background-color: #34315d;
+    padding: 10px 20px;
+    font-size: 1.3em;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover {
+    opacity: .7;
+}
+
+.login {
+    float: right;
+    margin-left: 30px;
+}
+
+/*header ended here */
+
+#content{
+    width: 50%;
+    color: black;
+    margin: 50px auto;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.getstarted{
+    display: block;
+    width: auto;
+    text-decoration: none;
+    background-color: #fff;
+    color: #34315d;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: all 500ms;
+    margin: 70px;
+}
+.getstarted:hover{
+    font-size: 1.2em
+}
+
+#content p {
+    margin: 40px;
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    margin-top: 70px;
+}
+
+@media screen  and (max-width: 960px){
+    section#image{
+        display: none;
+    }
+    section#content{
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+@media screen and (min-width: 961px) {
+    section#image{
+        display: block;
+        width: 60%;
+        height: 100vh;
+        padding: 2.5%;
+    }
+    section#image img{
+        width: 100%;
+        height: 100%;
+    }
+}
