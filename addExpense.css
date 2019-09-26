@@ -21,7 +21,7 @@ body {
     .row1 a:hover {
     text-decoration: underline;
     cursor: pointer;
-    color: #e8491d;
+    color: green;
   }  
 
     .row1 span:last-of-type {
@@ -87,11 +87,20 @@ textarea {
     padding: 15px;
     border: none;
     cursor: pointer;
-    width: 74%;
+    width: 75%;
     margin: 0 auto;
     opacity: 0.9;
   }
   
   input[type=submit]:hover {
     opacity:1;
+  }
+
+  select {
+    width: 75%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: block;
+    border: 1.5px solid white;
+    background: #f1f1f1;
   }
