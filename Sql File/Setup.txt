@@ -1,0 +1,5 @@
+Please create a table called "cshlogindb" 
+
+After that import the users table.
+
+Now signup and then login
