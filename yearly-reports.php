@@ -14,7 +14,7 @@ if (strlen($_SESSION['userId']==0)) {
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Finance Expense Tracker || Monthly Expense Report</title>
+	<title>Finance Expense Tracker || Yearly Expense Report</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/datepicker3.css" rel="stylesheet">
@@ -34,36 +34,36 @@ if (strlen($_SESSION['userId']==0)) {
 				<li><a href="#">
 					<em class="fa fa-home"></em>
 				</a></li>
-				<li class="active">Monthly Expense Report</li>
+				<li class="active">Yearly Expense Report</li>
 			</ol>
-		</div><!--/.row-->	
-		
+		</div><!--/.row-->
+			
 		<div class="row">
-			<div class="col-lg-12">
+			<div class="col-lg-12">		
 				<div class="panel panel-default">
-					<div class="panel-heading">Monthly Expense Report</div>
-						<div class="panel-body">
-							<p style="font-size:16px; color:red" align="center"> 
-								<?php if($msg){
-									echo $msg;
-									}
-								?> 
-							</p>
-							<div class="col-md-12">
-								<form role="form" method="post" action="expense-monthwise-reports-detailed.php" name="bwdatesreport">
-									<div class="form-group">
-										<label>From Date</label>
-										<input class="form-control" type="date"  id="fromdate" name="fromdate" required="true">
-									</div>
-									<div class="form-group">
-										<label>To Date</label>
-										<input class="form-control" type="date"  id="todate" name="todate" required="true">
-									</div>
-									<div class="form-group has-success">
-										<button type="submit" class="btn btn-primary" name="submit">Submit</button>
-									</div>
-								</form>
-							</div>
+					<div class="panel-heading">Yearly Expense Report</div>
+					<div class="panel-body">
+						<p style="font-size:16px; color:red" align="center">
+							<?php if($msg){ 
+								echo $msg;
+								} 
+							?>
+						</p>
+					
+						<div class="col-md-12">
+							<form role="form" method="post" action="yearly-reports-detailed.php" name="bwdatesreport">
+								<div class="form-group">
+									<label>From Date</label>
+									<input class="form-control" type="date"  id="fromdate" name="fromdate" required="true">
+								</div>
+								<div class="form-group">
+									<label>To Date</label>
+									<input class="form-control" type="date"  id="todate" name="todate" required="true">
+								</div>
+								<div class="form-group has-success">
+									<button type="submit" class="btn btn-primary" name="submit">Submit</button>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div><!-- /.panel-->

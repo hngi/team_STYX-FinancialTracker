@@ -14,7 +14,7 @@ if (strlen($_SESSION['userId']==0)) {
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Finance Expense Tracker || Daily Expense Report</title>
+	<title>Finance Expense Tracker || Yearly Expense Report</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/datepicker3.css" rel="stylesheet">
@@ -34,59 +34,62 @@ if (strlen($_SESSION['userId']==0)) {
 				<li><a href="#">
 					<em class="fa fa-home"></em>
 				</a></li>
-				<li class="active">Datewise Expense Report</li>
+				<li class="active">Yearly Expense Report</li>
 			</ol>
 		</div><!--/.row-->
-	
+		
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="panel panel-default">
-					<div class="panel-heading">Daily Expense Report</div>
+					<div class="panel-heading">Yearly Expense Report</div>
 					<div class="panel-body">
-						<div class="col-md-12">
+						<div class="col-md-12">					
+						<?php
+							$fdate=$_POST['fromdate'];
+							$tdate=$_POST['todate'];
+							$rtype=$_POST['requesttype'];
+						?>
+						<h5 align="center" style="color:blue">
+							Yearly Expense Report from <?php echo $fdate?> to <?php echo $tdate?>
+						</h5>
+						<hr />
+                        <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                            <thead>
+                                <tr>
+                                	<tr>
+										<th>S.NO</th>
+										<th>Year</th>
+										<th>Expense Amount</th>
+                					</tr>
+                                </tr>
+                            </thead>
 							<?php
-								$fdate=$_POST['fromdate'];
-								$tdate=$_POST['todate'];
-								$rtype=$_POST['requesttype'];
+								$userid=$_SESSION['userId'];
+								$ret=mysqli_query($conn,"SELECT year(ExpenseDate) AS rptyear,SUM(ExpenseCost) AS totalyear FROM tblexpense  where (ExpenseDate BETWEEN '$fdate' AND '$tdate') && (UserId='$userid') GROUP BY year(ExpenseDate)");
+								$cnt=1;
+								while ($row=mysqli_fetch_array($ret)) {
 							?>
-							<h5 align="center" style="color:blue">Daily Expense Report from <?php echo $fdate?> to <?php echo $tdate?></h5>
-							<hr />
-                            <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                                <thead>
-                                    <tr>
-                                        <tr>
-											<th>S.NO</th>
-											<th>Date</th>
-											<th>Expense Amount</th>
-                						</tr>
-                                    </tr>
-								</thead>
-								<?php
-									$userid=$_SESSION['detsuid'];
-									$ret=mysqli_query($conn,"SELECT ExpenseDate,SUM(ExpenseCost) AS totaldaily FROM `tblexpense`  WHERE (ExpenseDate BETWEEN '$fdate' AND '$tdate') && (UserId='$userid') GROUP BY ExpenseDate");
-									$cnt=1;
-									while ($row=mysqli_fetch_array($ret)) {
-								?>
               
-								<tr>
-									<td><?php echo $cnt;?></td>
-								
-									<td><?php  echo $row['ExpenseDate'];?></td>
-									<td><?php  echo $ttlsl=$row['totaldaily'];?></td>
-								</tr>
-								<?php
+                			<tr>
+								<td><?php echo $cnt;?></td>
+							
+								<td><?php  echo $row['rptyear'];?></td>
+								<td><?php  echo $ttlsl=$row['totalyear'];?></td>
+                			</tr>
+							<?php
 								$totalsexp+=$ttlsl; 
 								$cnt=$cnt+1;
 								}
-								?>
+							?>
 
-								<tr>
-								<th colspan="2" style="text-align:center">Grand Total</th>     
-								<td><?php echo $totalsexp;?></td>
-								</tr>     
+							<tr>
+							<th colspan="2" style="text-align:center">Grand Total</th>     
+							<td><?php echo $totalsexp;?></td>
+							</tr>     
 
-                            </table>
-						</div>
+                         </table>
+
+					</div>
 					</div>
 				</div><!-- /.panel-->
 			</div><!-- /.col-->

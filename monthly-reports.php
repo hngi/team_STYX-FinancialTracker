@@ -7,14 +7,14 @@ if (strlen($_SESSION['userId']==0)) {
   } else{
 
   
-
+}
   ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Financial Expense Tracker || Daily Expense Report</title>
+	<title>Finance Expense Tracker || Monthly Expense Report</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/datepicker3.css" rel="stylesheet">
@@ -34,23 +34,23 @@ if (strlen($_SESSION['userId']==0)) {
 				<li><a href="#">
 					<em class="fa fa-home"></em>
 				</a></li>
-				<li class="active">Daily Expense Report</li>
+				<li class="active">Monthly Expense Report</li>
 			</ol>
-		</div><!--/.row-->
+		</div><!--/.row-->	
 		
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="panel panel-default">
-					<div class="panel-heading">Daily Expense Report</div>
+					<div class="panel-heading">Monthly Expense Report</div>
 						<div class="panel-body">
 							<p style="font-size:16px; color:red" align="center"> 
 								<?php if($msg){
 									echo $msg;
-									}  
-								?>
+									}
+								?> 
 							</p>
 							<div class="col-md-12">
-								<form role="form" method="post" action="expense-datewise-reports-detailed.php" name="bwdatesreport">
+								<form role="form" method="post" action="monthly-reports-detailed.php" name="bwdatesreport">
 									<div class="form-group">
 										<label>From Date</label>
 										<input class="form-control" type="date"  id="fromdate" name="fromdate" required="true">
@@ -62,7 +62,7 @@ if (strlen($_SESSION['userId']==0)) {
 									<div class="form-group has-success">
 										<button type="submit" class="btn btn-primary" name="submit">Submit</button>
 									</div>
-								</form>					
+								</form>
 							</div>
 						</div>
 					</div>
@@ -83,4 +83,3 @@ if (strlen($_SESSION['userId']==0)) {
 	
 </body>
 </html>
-<?php } ?>

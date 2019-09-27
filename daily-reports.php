@@ -7,14 +7,14 @@ if (strlen($_SESSION['userId']==0)) {
   } else{
 
   
-}
+
   ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Finance Expense Tracker || Yearly Expense Report</title>
+	<title>Financial Expense Tracker || Daily Expense Report</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/datepicker3.css" rel="stylesheet">
@@ -34,39 +34,36 @@ if (strlen($_SESSION['userId']==0)) {
 				<li><a href="#">
 					<em class="fa fa-home"></em>
 				</a></li>
-				<li class="active">Yearly Expense Report</li>
+				<li class="active">Daily Expense Report</li>
 			</ol>
 		</div><!--/.row-->
 		
-		
-				
-		
 		<div class="row">
-			<div class="col-lg-12">		
+			<div class="col-lg-12">
 				<div class="panel panel-default">
-					<div class="panel-heading">Yearwise Expense Report</div>
-					<div class="panel-body">
-						<p style="font-size:16px; color:red" align="center">
-							<?php if($msg){ 
-								echo $msg;
-								} 
-							?>
-						</p>
-					
-						<div class="col-md-12">
-							<form role="form" method="post" action="expense-yearwise-reports-detailed.php" name="bwdatesreport">
-								<div class="form-group">
-									<label>From Date</label>
-									<input class="form-control" type="date"  id="fromdate" name="fromdate" required="true">
-								</div>
-								<div class="form-group">
-									<label>To Date</label>
-									<input class="form-control" type="date"  id="todate" name="todate" required="true">
-								</div>
-								<div class="form-group has-success">
-									<button type="submit" class="btn btn-primary" name="submit">Submit</button>
-								</div>
-							</form>
+					<div class="panel-heading">Daily Expense Report</div>
+						<div class="panel-body">
+							<p style="font-size:16px; color:red" align="center"> 
+								<?php if($msg){
+									echo $msg;
+									}  
+								?>
+							</p>
+							<div class="col-md-12">
+								<form role="form" method="post" action="daily-reports-detailed.php" name="bwdatesreport">
+									<div class="form-group">
+										<label>From Date</label>
+										<input class="form-control" type="date"  id="fromdate" name="fromdate" required="true">
+									</div>
+									<div class="form-group">
+										<label>To Date</label>
+										<input class="form-control" type="date"  id="todate" name="todate" required="true">
+									</div>
+									<div class="form-group has-success">
+										<button type="submit" class="btn btn-primary" name="submit">Submit</button>
+									</div>
+								</form>					
+							</div>
 						</div>
 					</div>
 				</div><!-- /.panel-->
@@ -86,3 +83,4 @@ if (strlen($_SESSION['userId']==0)) {
 	
 </body>
 </html>
+<?php } ?>

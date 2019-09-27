@@ -44,7 +44,7 @@ if (strlen($_SESSION['userId']==0)) {
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="panel panel-default">
-					<div class="panel-heading">Monthwise Expense Report</div>
+					<div class="panel-heading">Monthly Expense Report</div>
 					<div class="panel-body">
 						<div class="col-md-12">
 							<?php
@@ -52,7 +52,7 @@ if (strlen($_SESSION['userId']==0)) {
 								$tdate=$_POST['todate'];
 								$rtype=$_POST['requesttype'];
 							?>
-							<h5 align="center" style="color:blue">Monthwise Expense Report from <?php echo $fdate?> to <?php echo $tdate?></h5>
+							<h5 align="center" style="color:blue">Monthly Expense Report from <?php echo $fdate?> to <?php echo $tdate?></h5>
 							<hr />
                             <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                 <thead>
@@ -65,8 +65,8 @@ if (strlen($_SESSION['userId']==0)) {
                                     </tr>
                                	</thead>
 								<?php
-									$userid=$_SESSION['detsuid'];
-									$ret=mysqli_query($con,"SELECT month(ExpenseDate) AS rptmonth,year(ExpenseDate) AS rptyear,SUM(ExpenseCost) AS totalmonth FROM tblexpense  where (ExpenseDate BETWEEN '$fdate' AND '$tdate') && (UserId='$userid') GROUP BY month(ExpenseDate),year(ExpenseDate)");
+									$userid=$_SESSION['userId'];
+									$ret=mysqli_query($conn,"SELECT month(ExpenseDate) AS rptmonth,year(ExpenseDate) AS rptyear,SUM(ExpenseCost) AS totalmonth FROM tblexpense  where (ExpenseDate BETWEEN '$fdate' AND '$tdate') && (UserId='$userid') GROUP BY month(ExpenseDate),year(ExpenseDate)");
 									$cnt=1;
 									while ($row=mysqli_fetch_array($ret)) {
 								?>
