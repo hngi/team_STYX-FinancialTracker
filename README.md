@@ -1,4 +1,2 @@
 # team_STYX-project
-This Repo belongs to team STYX where  projects are been worked on.
- Friilancer added the signUp and Login page.
- Phiiileo added the user_homepage.
+This file has been worked and should not be touched by anyone without permission. PLEASE DO NOT MAKE ANY PUSH OR PULL REQUESTS. THANKS!
