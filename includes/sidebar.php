@@ -47,21 +47,7 @@
             </ul>
         </li>
        
-        <li class="parent "><a data-toggle="collapse" href="#sub-item-2">
-            <em class="fa fa-navicon">&nbsp;</em>Expense Report <span data-toggle="collapse" href="#sub-item-2" class="icon pull-right"><em class="fa fa-plus"></em></span>
-            </a>
-            <ul class="children collapse" id="sub-item-2">
-                <li><a class="" href="daily-reports.php">
-                    <span class="fa fa-arrow-right">&nbsp;</span> Daily Expenses
-                </a></li>
-                <li><a class="" href="monthly-reports.php">
-                    <span class="fa fa-arrow-right">&nbsp;</span> Monthly Expenses
-                </a></li>
-                <li><a class="" href="yearly-reports.php">
-                    <span class="fa fa-arrow-right">&nbsp;</span> Yearly Expenses
-                </a></li>    
-            </ul>
-        </li>
+        <li><a href="reports.php"><em class="fas fa-book">&nbsp;</em> Generate Expenses Report</a></li>
 
         <li><a href="profile.php"><em class="fa fa-user">&nbsp;</em> Profile</a></li>
 

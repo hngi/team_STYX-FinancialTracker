@@ -80,7 +80,7 @@
 									<tr>
 										<th>S.NO</th>
 										<th>Expense Item</th>
-										<th>Expense Cost</th>
+										<th>Expense Cost (₦)</th>
 										<th>Expense Date</th>
 										<th>Action</th>
 									</tr>
@@ -97,7 +97,7 @@
 									<tr>
 										<td><?php echo $cnt;?></td>
 										<td><?php echo $row['ExpenseItem'];?></td>
-										<td><?php echo $row['ExpenseCost'];?></td>
+										<td><?php echo number_format($row['ExpenseCost'], 2);?></td>
 										<td><?php echo $row['ExpenseDate'];?></td>
 										<td>
 											<a href="manage-expense.php?delid=<?php echo $row['ID'];?>">Delete</a>
