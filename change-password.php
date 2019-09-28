@@ -9,10 +9,8 @@
 
 		if(isset($_POST['change'])) {
 			$userid = $_SESSION['id'];
-
 			$pword = $_POST['pword'];
 			$phash = md5($pword);
-			
 			$npword = $_POST['npword'];
 			$cpword = $_POST['cpword'];
 			$hash = md5($npword);
@@ -33,26 +31,26 @@
 					echo "<script>window.location.href='change-password.php'</script>";
 				}
 
-				elseif(!($npword === $cpword)) {
-					echo "<script>alert('Password doesn't match.');</script>";
-					echo "<script>window.location.href='change-password.php'</script>";
-				} 
-
 				else {
+
+					if(!($npword === $cpword)) {
+						echo "<script>alert('Password doesn't match.');</script>";
+						echo "<script>window.location.href='change-password.php'</script>";
+					} else {
 				
-					$sql = "UPDATE users SET pword = '$hash' WHERE id = '$userid'";
-					$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
-					
-					if($result) {
-						echo "<script>alert('You have successfully reset password');</script>";
-						echo "<script>window.location.href='dashboard.php'</script>";
+						$sql = "UPDATE users SET pword = '$hash' WHERE id = '$userid'";
+						$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+						
+						if($result) {
+							echo "<script>alert('You have successfully reset password');</script>";
+							echo "<script>window.location.href='dashboard.php'</script>";
+						}
 					}
 				}
+
 			}
 
 		}
-
-		
 ?>
 
 

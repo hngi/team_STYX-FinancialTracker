@@ -14,7 +14,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>STYX Finance Tracker || Daily Expense Report</title>
+	<title>STYX Finance Tracker || Generate Expense Report</title>
 	<!-- Font Awesome -->
   	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -47,7 +47,7 @@
 				<li><a href="dashboard.php">
 					<em class="fa fa-home"></em>
 				</a></li>
-				<li class="active">Daily Expense Report</li>
+				<li class="active">Generate Expense Report</li>
 			</ol>
 		</div>
 		
@@ -56,15 +56,15 @@
 			<div class="row" style="margin-top: 30px;">
 				<div class="col-lg-12">
 					<div class="panel panel-default">
-						<div class="panel-heading">Daily Expense Report</div>
+						<div class="panel-heading">Generate Expense Report</div>
 						<div class="panel-body">
 							<div class="col-md-12">
 								<?php
-									$fdate=$_POST['fromdate'];
-									$tdate=$_POST['todate'];
-									$rtype=$_POST['requesttype'];
+									$fdate = $_POST['fromdate'];
+									$tdate = $_POST['todate'];
+									$rtype = $_POST['requesttype'];
 								?>
-								<h5 align="center" style="color:blue">Daily Expense Report from <?php echo $fdate?> to <?php echo $tdate?></h5>
+								<h5 align="center" style="color:blue">Expense Report from <?php echo $fdate?> to <?php echo $tdate?></h5>
 								<hr />
 	                            <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 	                                <thead>
@@ -77,27 +77,26 @@
 	                                    </tr>
 									</thead>
 									<?php
-										$userid=$_SESSION['id'];
-										$ret=mysqli_query($conn,"SELECT ExpenseDate,SUM(ExpenseCost) AS totaldaily FROM `tblexpense`  WHERE (ExpenseDate BETWEEN '$fdate' AND '$tdate') && (UserId='$userid') GROUP BY ExpenseDate");
-										$cnt=1;
-										while ($row=mysqli_fetch_array($ret)) {
+										$userid = $_SESSION['id'];
+										$ret = mysqli_query($conn,"SELECT ExpenseDate,SUM(ExpenseCost) AS totaldaily FROM `tblexpense`  WHERE (ExpenseDate BETWEEN '$fdate' AND '$tdate') && (UserId = '$userid') GROUP BY ExpenseDate");
+										$cnt = 1;
+										while ($row = mysqli_fetch_array($ret)) {
 									?>
 	              
 									<tr>
 										<td><?php echo $cnt;?></td>
-									
 										<td><?php  echo $row['ExpenseDate'];?></td>
-										<td><?php  echo $ttlsl=$row['totaldaily'];?></td>
+										<td><?php  echo number_format(($ttlsl = $row['totaldaily']),2);?></td>
 									</tr>
 									<?php
-									$totalsexp+=$ttlsl; 
-									$cnt=$cnt+1;
-									}
+										$totalsexp += $ttlsl; 
+										$cnt = $cnt + 1;
+										}
 									?>
 
 									<tr>
 									<th colspan="2" style="text-align:center">Grand Total</th>     
-									<td><?php echo $totalsexp;?></td>
+									<td><?php echo "₦ ". number_format($totalsexp, 2);?></td>
 									</tr>     
 
 	                            </table>
