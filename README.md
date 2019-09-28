@@ -3,7 +3,7 @@
 For Visitors:
 Dear esteemed visitor, welcome.
 The financial app helps you to track your expenses and keep report of how you manage you money.
-1. Visit our url at https://styxFinance
+1. Visit our url at http://styx.afroblogit.com/financetracker
 2. Register with unique username and valid email
 3. Update your profile details
 4. Always input both your income and expenses
