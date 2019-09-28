@@ -1,0 +1,89 @@
+/* SignIn and SignUp pages*/
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    color: white;
+}
+
+.vec {
+    padding: 17vh 5%;
+    margin: auto;
+}
+
+.vec>h5 {
+    color: #071739;
+}
+
+.vec>p {
+    color: #303030;
+}
+
+.abs {
+    position: fixed;
+    top: 5vh
+}
+
+.main {
+    background: #071739;
+    padding: 17vh 5%;
+    height:100vh;
+}
+
+@media screen and (max-width:768px) {
+    .vec{
+        display: none;
+    }
+
+}
+
+form {
+    color: white;
+}
+
+img {
+    margin: auto;
+    width: 100%;
+    max-width: 520px;
+}
+
+.form-control {
+    border: 0px;
+    border-radius: 0;
+    border: 1px solid white;
+    background: #071739;
+}
+
+input {
+    color: white;
+}
+
+.form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+button {
+    background: #008D1F;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 8px;
+    border: 1px solid #008D1F;    
+    width: 100%;
+}
+
+a.signUpLink {
+    color: #008D1F;
+    text-decoration: underline;
+}
+
+button:focus {
+    outline: none;  
+}
+
+.input-group-text {
+    background: #071739;
+    border-radius: 0;
+    color: white;
+}
