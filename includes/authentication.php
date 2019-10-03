@@ -26,8 +26,8 @@
 			$errors['email'] = 'INVALID EMAIL FORMAT';
 			header("Location: ../signup.php");
 		} 
-		elseif (!preg_match("/^([0-9]{11,13})$/", $phone)) {
-			$errors['number'] = 'PHONE NUMBER: INVALID FORMAT; MINIMUM OF 11 AND MAXIMUM OF 13 DIGITS';
+		elseif (!preg_match("/^([0-9]{11})$/", $phone)) {
+			$errors['number'] = 'PHONE NUMBER: INVALID FORMAT; MAXIMUM OF 11 DIGITS';
 			header("Location: ../signup.php");
 		}
 		elseif ($pword !== $cpword) {
