@@ -6,35 +6,35 @@
 		
 		$errors = array();
 
-		$fname = $_POST['fname'];
-		$email = $_POST['email'];
-		$phone = $_POST['phone'];
-		$pword = $_POST['pword'];
+		$fname = trim($_POST['fname']);
+		$email = trim($_POST['email']);
+		$phone = trim($_POST['phone']);
+		$pword = trim($_POST['pword']);
 		$hash = md5($pword);
-		$cpword = $_POST['cpword'];
+		$cpword = trim($_POST['cpword']);
 		$image = "ebcd036a0db50db993ae98ce380f6419.png";
 
-		if(empty($fname) || empty($email) || empty($phone) || empty($pword) || empty($cpword)){
+		if (empty($email) || empty($fname) || empty($pword) || empty($cpword)  || empty($phone)) {
 			$errors['empty'] = '**All fields are required';
 			header("Location: ../signup.php");
 		}
-
-		elseif(!($pword === $cpword)) {
-			$errors['password'] = '**Passwords do not match';
+		elseif (!preg_match("/^[ a-zA-Z ]*$/", $fname)) {
+			$errors['fname'] = 'INVALID NAME FORMAT: LETTERS AND WHITESPACES ONLY';
 			header("Location: ../signup.php");
 		}
-		
-		elseif(strlen($pword) < 6) {
-		    $errors['pass_leng'] = "Password must be 6 characters or more ";
-		    header("Location: ../signup.php");
-		}
-
-		elseif(!preg_match('/^[0-9]*$/', $phone)) {
-			$errors['number'] = '**Invalid Phone Number!';
+		elseif (!preg_match("/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,10})$/", $email)) {
+			$errors['email'] = 'INVALID EMAIL FORMAT';
 			header("Location: ../signup.php");
-	    }
-	    
-	    else {
+		} 
+		elseif (!preg_match("/^([0-9]{11})$/", $phone)) {
+			$errors['number'] = 'PHONE NUMBER: INVALID FORMAT; PLEASE FILL IN 11 DIGITS';
+			header("Location: ../signup.php");
+		}
+		elseif ($pword !== $cpword) {
+			$errors['password'] = 'PASSWORDS DO NOT MATCH';
+			header("Location: ../signup.php");
+		}
+		else {
 	    	$query = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'") or die(mysqli_error($conn));
 
 			if(mysqli_num_rows($query) > 0) {
@@ -46,7 +46,7 @@
 		    	$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 		    	
 		    	if($result) {
-		    		$_SESSION['success'] = "You have successfully registered, please login";
+		    		$_SESSION['success'] = "You have successfully registered, Please login";
 		    		header("Location: ../login.php");
 		    	}
 	    	}
@@ -56,10 +56,11 @@
 	    	$_SESSION['errors'] = $errors;
 	    	exit;
 		} else {
-		    // clean up previous validation errors, everything's fine
+		    
 		    unset($_SESSION['errors']);
 		}
 	}
+
 
 
 	/*====== Authentication for Sign In ======*/
