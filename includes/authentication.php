@@ -27,7 +27,7 @@
 			header("Location: ../signup.php");
 		} 
 		elseif (!preg_match("/^([0-9]{11})$/", $phone)) {
-			$errors['number'] = 'PHONE NUMBER: INVALID FORMAT; MAXIMUM OF 11 DIGITS';
+			$errors['number'] = 'PHONE NUMBER: INVALID FORMAT; PLEASE FILL IN 11 DIGITS';
 			header("Location: ../signup.php");
 		}
 		elseif ($pword !== $cpword) {
