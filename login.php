@@ -3,9 +3,6 @@
     session_start();
 
     include('includes/config.php'); 
-    require_once "config.php";
-    $loginurl = $gclient -> createAuthUrl();
-
 ?>
 
 
