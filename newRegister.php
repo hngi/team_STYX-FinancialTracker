@@ -119,7 +119,7 @@
                   <div class="text-center">
                     <button class="btn btn-indigo">SIGN UP</button>
                     <hr>
-                    <p class="mt-5">Already have an account? <a href="login.php">Sign in</a></p>
+                    <p class="mt-5">Already have an account? <a href="newlogin.php">Sign in</a></p>
                   </div>
 
                 </form>
