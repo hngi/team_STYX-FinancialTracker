@@ -124,9 +124,7 @@
                     <div class="mt-5">
 
                         <input type="submit" class="button" name="login" value="Sign In">
-                        <input type="button" class="btn btn-danger" value="Sign In with Google" onclick="window.location = '<?php echo $loginurl; ?>'" style="margin-top: 20px; width: 100%;">
-
-
+                       
                     </div>        
 
                     
