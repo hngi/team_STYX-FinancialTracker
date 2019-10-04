@@ -2,6 +2,13 @@
 	session_start();
 	error_reporting(0);
 	include('includes/config.php');
+	#For google user
+	if(!isset($_SESSION['access_token']))
+    {
+        header("locaton : login.php");
+        exit();
+	}
+	#Ends here
 	
 	if (strlen($_SESSION['id'] == 0)) {
 		header('location:login.php');
