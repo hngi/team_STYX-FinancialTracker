@@ -92,7 +92,7 @@
 			</div>
 		</div>
 
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row" id="row">
 				<div class="col-lg-12">
 					<div class="panel panel-default">

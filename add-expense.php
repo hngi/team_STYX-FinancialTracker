@@ -77,7 +77,7 @@
 			</ol>
 		</div>
 
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row" style="margin-top: 30px;">
 				<div class="col-lg-12">
 					<div class="panel panel-default">

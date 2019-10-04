@@ -79,7 +79,7 @@
 
 		.goal-subcontainer {
 			display: grid;
-			grid-template-columns: 8fr 4fr;
+			grid-template-columns: 1fr;
 			grid-gap: 20px;	
 			padding-bottom: 10px;		
 			border-bottom: 1px solid grey;
@@ -88,7 +88,6 @@
 		}
 
 		.current-goal {
-			border-left: 1px solid grey;
 			padding: 0 20px;
 		}
 
@@ -102,6 +101,18 @@
 
 		.current-goal p span {
 			float: right;
+		}
+		
+		@media screen and (min-width: 1000px){
+		.goal-subcontainer {
+			display: grid;
+			grid-template-columns: 8fr 4fr;
+		}	
+
+		.current-goal {
+			border-left: 1px solid grey;
+			
+		}
 		}
 
 	</style>
@@ -142,7 +153,7 @@
 
 		
 
-		<div class="container">
+		<div class="container-fluid">
 
 			<div class="row">
 
@@ -156,7 +167,7 @@
 
 			
 			<!-- #Current goals start here -->
-			<div class="row goal-container">
+			<div class="row goal-container container">
 				<div class="goal-subcontainer">
 					<section >
 						<h3>Current Goal</h3>

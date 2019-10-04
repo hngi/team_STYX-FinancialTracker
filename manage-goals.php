@@ -82,8 +82,6 @@
             margin-bottom: 20px;
         }
 
-
-
 	</style>
 
 </head>
@@ -103,7 +101,7 @@
 			</ol>
         </div>
         
-        <div class="container">
+        <div class="container-fluid">
             <div class="goal-container">
                 <h3>Add Goal</h3>
 
