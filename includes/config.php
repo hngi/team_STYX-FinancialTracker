@@ -1,7 +1,7 @@
 <?php
 	$servername = "localhost";
 	$user = "root";
-	$password = "6g+1FsQh7B1n[O";
+	$password = "";
 	$db = "finance_tracker";
 
 	// Creating connection

@@ -1,3 +1,6 @@
+# team_STYX-FinancialTracker
+This Repo belongs to team STYX where  projects are been worked on
+
 #Team_STYX-project/Financial-Tracker/
 
 For Visitors:
@@ -24,4 +27,3 @@ Kindly note:
 5. Kindly create a fresh branch if you need a clean slate to work with, your works can be adopted from the branch.
 
 Thanks
-
