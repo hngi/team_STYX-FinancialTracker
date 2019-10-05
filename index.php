@@ -23,6 +23,74 @@
     .view {
       height: 100%;
     }
+     .btn-indigo {
+         color: #fff;
+         background: #3F51B5!important;
+         overflow: hidden!important;
+         border-radius: 0px!important;
+         transition: 0.2s!important;
+    }
+      .btn-indigo:hover {
+/*          color: aq;*/
+          background: #2196f3!important;
+         box-shadow: 0 0 5px #2196f3, 0 0 20px #2196f3, 0 0 40px #2196f3!important;
+         border-radius: 0px!important;
+          transition-delay: .1s!important;
+    }
+      .btn-indigo span {
+          position: absolute;
+/*          display: block;*/
+      }
+       .btn-indigo span:nth-child(1) {
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, #fff);
+      }
+      .btn-indigo:hover span:nth-child(1) {
+          left: 100%;
+          transition: 1s;
+      }
+      
+      .btn-indigo span:nth-child(3) {
+          bottom: 0;
+          right: -100%;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(270deg, transparent, #fff);
+      }
+      .btn-indigo:hover span:nth-child(3) {
+          right: 100%;
+          transition: 1s;
+          transition-delay: 0.5s;
+      }
+      
+      .btn-indigo span:nth-child(2) {
+          top: -100%;
+          right: 0;
+          width: 2px;
+          height: 100%;
+          background: linear-gradient(180deg, transparent, #fff);
+      }
+      .btn-indigo:hover span:nth-child(2) {
+          top: 100%;
+          transition: 1s;
+          transition-delay: 0.25s;
+      }
+      
+      .btn-indigo span:nth-child(4) {
+          bottom: -100%;
+          left: 0;
+          width: 2px;
+          height: 100%;
+          background: linear-gradient(360deg, transparent, #fff);
+      }
+      .btn-indigo:hover span:nth-child(4) {
+          bottom: 100%;
+          transition: 1s;
+          transition-delay: 0.75s;
+      }
 
     @media (max-width: 768px) {
       html,
@@ -136,9 +204,15 @@
                     <label for="form2">Password</label>
                   </div>
                   
+                  
                   <div class="text-center">
-                    <a href="forgot_password.php">Forgot Password</a></p>
-                    <button class="btn btn-indigo" type="submit" name="login">SIGN IN</button>
+                    <p><center><a href="forgot_password.php">Forgot Password</a></center></p>
+                    <button class="btn btn-indigo" type="submit" name="login">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    SIGN IN</button>
                     <hr>
                     <p class="mt-5">Don't have an Account? <a href="signup.php">Sign Up</a></p>
                   </div>

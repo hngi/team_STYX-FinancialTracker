@@ -23,7 +23,74 @@
     .view {
       height: 100%;
     }
-
+     .btn-indigo {
+         color: #fff;
+         background: #3F51B5!important;
+         overflow: hidden!important;
+         border-radius: 0px!important;
+         transition: 0.2s!important;
+    }
+      .btn-indigo:hover {
+/*          color: aq;*/
+          background: #2196f3!important;
+         box-shadow: 0 0 5px #2196f3, 0 0 20px #2196f3, 0 0 40px #2196f3!important;
+         border-radius: 0px!important;
+          transition-delay: .1s!important;
+    }
+      .btn-indigo span {
+          position: absolute;
+          display: block;
+      }
+       .btn-indigo span:nth-child(1) {
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, #fff);
+      }
+      .btn-indigo:hover span:nth-child(1) {
+          left: 100%;
+          transition: 1s;
+      }
+      
+      .btn-indigo span:nth-child(3) {
+          bottom: 0;
+          right: -100%;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(270deg, transparent, #fff);
+      }
+      .btn-indigo:hover span:nth-child(3) {
+          right: 100%;
+          transition: 1s;
+          transition-delay: 0.5s;
+      }
+      
+      .btn-indigo span:nth-child(2) {
+          top: -100%;
+          right: 0;
+          width: 2px;
+          height: 100%;
+          background: linear-gradient(180deg, transparent, #fff);
+      }
+      .btn-indigo:hover span:nth-child(2) {
+          top: 100%;
+          transition: 1s;
+          transition-delay: 0.25s;
+      }
+      
+      .btn-indigo span:nth-child(4) {
+          bottom: -100%;
+          left: 0;
+          width: 2px;
+          height: 100%;
+          background: linear-gradient(360deg, transparent, #fff);
+      }
+      .btn-indigo:hover span:nth-child(4) {
+          bottom: 100%;
+          transition: 1s;
+          transition-delay: 0.75s;
+      }
     @media (max-width: 768px) {
       html,
       body,
@@ -115,35 +182,7 @@
                   </h3>
                   <hr>
 
-                  <?php
-                    include("includes/authentication.php");
-                    
-                    if(isset($_SESSION['errors']['empty'])){
-                        echo "<div class='alert alert-danger'>" .$_SESSION['errors']['empty']. "</div>";
-                        unset($_SESSION['errors']['empty']);
-                    }
-                    
-                    if(isset($_SESSION['errors']['password'])){
-                        echo "<div class='alert alert-danger'>" .$_SESSION['errors']['password']. "</div>";
-                        unset($_SESSION['errors']['password']);
-                    }
-                    
-                    if(isset($_SESSION['errors']['number'])){
-                        echo "<div class='alert alert-danger'>" .$_SESSION['errors']['number']. "</div>";
-                        unset($_SESSION['errors']['number']);
-                    }
-                    
-                    if(isset($_SESSION['errors']['email'])){
-                        echo "<div class='alert alert-danger'>" .$_SESSION['errors']['email']. "</div>";
-                        unset($_SESSION['errors']['email']);
-                    }
-                    
-                    if(isset($_SESSION['errors']['fname'])){
-                        echo "<div class='alert alert-danger'>" .$_SESSION['errors']['fname']. "</div>";
-                        unset($_SESSION['errors']['fname']);
-                    }
-
-                  ?>
+               
 
                   <div class="md-form">
                     <i class="fas fa-user prefix grey-text"></i>
@@ -176,7 +215,13 @@
                   </div>
                   
                   <div class="text-center">
-                    <button class="btn btn-indigo" type="submit" name="register">SIGN UP</button>
+                   <button class="btn btn-indigo" type="submit" name="register">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    SIGN UP</button>
+<!--                    <button class="btn btn-indigo" type="submit" name="register">SIGN UP</button>-->
                     <hr>
                     <p>Already have an account? <a href="index.php">Sign In</a></p>
                   </div>
