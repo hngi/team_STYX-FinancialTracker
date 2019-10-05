@@ -15,20 +15,20 @@
 		$email_from ='teamstynxcontact@gmail.com';
 		$email_subject = 'New Contact Form Submission';
 		$email_body = "Username: $name. \n".
-					"User Email: $email. \n".
+
+					"User Email: $email. \n". 
 					"User Message: $message. \n";
 
 		$to = "teamstynxfeedback@gmail.com";
 
 		$headers = "From: $email_from \r\n";
 		$headers .= "Reply-To: $email \r\n";
-
 		mail($to, $email_subject,$email_body,$headers);
 				header("Location: contact.php?signup=success");
 				exit();
-				}
+				}			
+	}	
 
-	}
 
 
 ?>
@@ -58,8 +58,10 @@
 		}
 
     #container {
-      width: 40%;
-      margin-left: 30%;
+
+      width: 70%;
+      margin-left: 15%;
+
     }
 		#row {
 			margin-top: 2%;
@@ -80,22 +82,25 @@
 			color: white;
 			font-size: 20px;
 		}
-		.has-success {
-			margin-left: 40%;
-		}
 	</style>
 </head>
 
 <body style="padding-top:0px">
 
-		<div class="container">
+		<div class="row" style="background-color: #071739">
+			<div class="col-lg-12 col-md-12 col-sm-12 c0l-xs-12">
+				<div class="head" id="head">
+					<h3 class="head"><a href="dashboard.php">STYX Finance Tracker</a></h3>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
 			<div class="row" id="row">
 				<div class="col-lg-12">
-					<div class="text-center">
-						<h2>Contact Us</h2>
-					<p>Do you have any questions? or suggestions for us.
-						<br> Feel free to contact us and we will get back to you within few hours </p>
-					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading text-center">Contact Us</div>
+						<div class="panel-body">
 							<div class="col-md-12">
                 <div id="container">
 								<form role="form" method="post" action="">
@@ -115,33 +120,38 @@
 									</div>
 
 									<div class="form-group has-success">
-										<button type="submit" class="btn btn-info" id="submitcontact"name="submitcontact">Submit</button>
 
+										<button type="submit" class="btn btn-primary btn-block" id="submitcontact"name="submitcontact">Submit</button>
+										
 			<?php
-
+					
 					 $fullUrl ="http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 					 if(strpos($fullUrl, "?signup=char" ) == true ){
 						 echo "<span id='error_message'> Invalid name </span>";
-
+					
 					 } elseif(strpos($fullUrl, "?signup=email" ) == true ){
 						 echo "<span id='error_message'> Invalid email </span>";
-
+					
 					 } elseif(strpos($fullUrl, "?signup=success" ) == true ){
 						 echo "<span id='success_message'> Thanks!!, Your message has been sent </span>";
-
-					 }
+					
+					 } 
 
 			?>
 									</div>
 									<br>
                   </form>
-
-
+					
+						
 								</div>
 
 							</div>
-			
+						</div>
+					</div>
+				</div>
+				<p style="text-align: center">FINANCIAL TRACKER <a href="dashboard.php">STYX</a></p>
+			</div>
 		</div>
 
 
