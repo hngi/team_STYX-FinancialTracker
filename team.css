@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.teamBody::after {
+    content: "";
+    /*background: url('https://res.cloudinary.com/friilancer/image/upload/v1570209674/ia16idwqtvhhgzrlo1ga.jpg');*/
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
+img{
+    margin: auto;
+    width: 100%;
+}
+.crd img{
+    height: 160px;
+    border-radius: 100%;
+}
+.crd{
+   width: 170px;
+   margin-bottom: 15px;
+}
+ .card-body{
+     border-radius: 20%;
+     height: 90px;
+     background: #f3f3f3;     
+ }
+ .card-body>a{
+     margin: auto;
+ }
+ .card-title{
+     padding-top: 0;
+ }
