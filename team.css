@@ -2,6 +2,8 @@ body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    /*background : linear-gradient(35deg, rgba(18,53,83, 0.3), rgba(161, 199, 230, 0.3));*/
+    background: #f3f3f3;
 }
 .teamBody::after {
     content: "";
@@ -21,15 +23,19 @@ img{
 .crd img{
     height: 160px;
     border-radius: 100%;
+    padding-top: 5px;
 }
 .crd{
    width: 170px;
    margin-bottom: 15px;
+   border-top: 1px solid black;
+   border-bottom: 1px solid black; 
+   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.19) 
 }
  .card-body{
      border-radius: 20%;
      height: 90px;
-     background: #f3f3f3;     
+     /*background: #f3f3f3;*/     
  }
  .card-body>a{
      margin: auto;
