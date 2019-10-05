@@ -26,8 +26,6 @@
      .btn-indigo {
          color: #fff;
          background: #3F51B5!important;
-        transform: translate(-50%,-50%)!important;
-/*         box-shadow: 0 20px 50px rgba(0,0,0,0.3)!important;*/
          overflow: hidden!important;
          border-radius: 0px!important;
          transition: 0.2s!important;
@@ -41,7 +39,7 @@
     }
       .btn-indigo span {
           position: absolute;
-          display: block;
+/*          display: block;*/
       }
        .btn-indigo span:nth-child(1) {
           top: 0;
@@ -206,8 +204,9 @@
                     <label for="form2">Password</label>
                   </div>
                   
+                  
                   <div class="text-center">
-                    <a href="forgot_password.php">Forgot Password</a>
+                    <p><center><a href="forgot_password.php">Forgot Password</a></center></p>
                     <button class="btn btn-indigo" type="submit" name="login">
                     <span></span>
                     <span></span>

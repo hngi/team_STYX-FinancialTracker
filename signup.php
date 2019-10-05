@@ -26,8 +26,6 @@
      .btn-indigo {
          color: #fff;
          background: #3F51B5!important;
-        transform: translate(-50%,-50%)!important;
-/*         box-shadow: 0 20px 50px rgba(0,0,0,0.3)!important;*/
          overflow: hidden!important;
          border-radius: 0px!important;
          transition: 0.2s!important;
@@ -184,35 +182,7 @@
                   </h3>
                   <hr>
 
-                  <?php
-                    include("includes/authentication.php");
-                    
-                    if(isset($_SESSION['errors']['empty'])){
-                        echo "<div class='alert alert-danger'>" .$_SESSION['errors']['empty']. "</div>";
-                        unset($_SESSION['errors']['empty']);
-                    }
-                    
-                    if(isset($_SESSION['errors']['password'])){
-                        echo "<div class='alert alert-danger'>" .$_SESSION['errors']['password']. "</div>";
-                        unset($_SESSION['errors']['password']);
-                    }
-                    
-                    if(isset($_SESSION['errors']['number'])){
-                        echo "<div class='alert alert-danger'>" .$_SESSION['errors']['number']. "</div>";
-                        unset($_SESSION['errors']['number']);
-                    }
-                    
-                    if(isset($_SESSION['errors']['email'])){
-                        echo "<div class='alert alert-danger'>" .$_SESSION['errors']['email']. "</div>";
-                        unset($_SESSION['errors']['email']);
-                    }
-                    
-                    if(isset($_SESSION['errors']['fname'])){
-                        echo "<div class='alert alert-danger'>" .$_SESSION['errors']['fname']. "</div>";
-                        unset($_SESSION['errors']['fname']);
-                    }
-
-                  ?>
+               
 
                   <div class="md-form">
                     <i class="fas fa-user prefix grey-text"></i>
@@ -245,7 +215,13 @@
                   </div>
                   
                   <div class="text-center">
-                    <button class="btn btn-indigo" type="submit" name="register">SIGN UP</button>
+                   <button class="btn btn-indigo" type="submit" name="register">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    SIGN UP</button>
+<!--                    <button class="btn btn-indigo" type="submit" name="register">SIGN UP</button>-->
                     <hr>
                     <p>Already have an account? <a href="index.php">Sign In</a></p>
                   </div>
