@@ -91,7 +91,7 @@
 								<form role="form" method="post" action="">
 									<div class="form-group">
 										<label>Date of Expense</label>
-										<input class="form-control" type="date" name="dateexpense" required="true">
+										<input class="form-control" type="date" name="dateexpense" value="<?php echo date('Y-m-d'); ?>" required="true">
 									</div>
 									<div class="form-group">
 										<label>Item</label>

@@ -6,6 +6,7 @@
 	if (strlen($_SESSION['id'] == 0)) {
 	  	header('Location: login.php');
 	} else {
+
 ?>
 
 
@@ -76,6 +77,7 @@
     			
     		}
 		}
+
 	</style>
 
 </head>
@@ -107,55 +109,43 @@
 			<div class="row goal-container container">
 				<div class="goal-subcontainer">
 					<section >
-						<h3>Current Goal</h3>
+					<?php
+						$userid = $_SESSION['id'];
+						$query = mysqli_query($conn,"SELECT * FROM goaltracker WHERE userId = '$userid' ORDER BY goalDate DESC ");
+						$result = mysqli_fetch_array($query);
+						date_default_timezone_set("Africa/Lagos");
+						$currentdate = date("Y-m-d");
+						$duedate = $result['goalDate'];
+						$postdate = $result['postdate'];
+						$diff1 = (strtotime($duedate) - strtotime($currentdate))/60/60/24;
+						$diff2 = (strtotime($duedate) - strtotime($postdate))/60/60/24;	
+						$goal = ($diff2/$diff1) * 100;
+						$goalpercent = 100 - $goal;
+​
+						?> 
+​
+						<h4 style="font-weight: bold;">Current Goal</h4>
 						<p>
-						<span class="goal-title text-bold">Goal title </span><span class="goal-progress text-info"> 0%</span>
+						<span class="goal-title text-bold"><?php echo htmlentities($result['goalTitle']); ?> </span>
+						<span class="goal-progress text-info"><?php echo ceil($goalpercent); ?>%</span>
 						</p>
-
+​
 						<div class="progress">
-							<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+							<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo ceil($goalpercent); ?>%">
 							</div>
-						  </div>
-
+						</div>
+​
 					</section>
 					<section class="current-goal">
-						<p>Goal: <span>&#8358 </span> </p>
-						<p>Due date: <span>Date</span></p>
-						<p>Category: <span>Important</span></p>
+						<p>Goal: <span>&#8358 <?php echo htmlentities($result['goalAmount']); ?></span> </p>
+						<p>Due date: <span><?php echo htmlentities($result['goalDate']); ?></span></p>
+						<p>Category: <span><?php echo htmlentities($result['goalCategory']); ?></span></p>
 					</section>
 				</div>
 				<a href="manage-goals.php"><input type="button" name="manageGoal" id="manageGoal" value="Manage Goal" class="btn btn-info" style="width: 150px;float: right;"></a>
 				<!--#Current goals end here -->
 			</div>
-			
-			
-			<div class="row">
-				<div class="col-md-4">	
-					<div class="panel panel-default">
-						<div class="panel-body easypiechart-panel">
-							<?php
-								//Today Expense
-								$userid = $_SESSION['id'];
-								$tdate = date('Y-m-d');
-								$query = mysqli_query($conn,"SELECT sum(ExpenseCost)  AS todaysexpense FROM tblexpense WHERE (ExpenseDate)  = '$tdate' && (UserId='$userid');");
-								$result = mysqli_fetch_array($query);
-								$sum_today_expense = $result['todaysexpense'];
-							?> 
 
-								<h4>Today's Expense (₦)</h4>
-								<div class="easypiechart" id="easypiechart-blue" data-percent="<?php echo $sum_today_expense;?>" >
-									<span class="percent">
-										<?php if($sum_today_expense == "") {
-											echo "0";
-											} else {
-												echo number_format($sum_today_expense);
-											}
-										?>
-									</span>
-								</div>
-						</div>
-					</div>
-				</div>
 
 				<div class="col-md-4">
 					<div class="panel panel-default">

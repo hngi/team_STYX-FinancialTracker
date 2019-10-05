@@ -66,12 +66,12 @@
 									<form role="form" method="post" action="reports-detailed.php" name="bwdatesreport">
 										<div class="form-group">
 											<label>From Date</label>
-											<input class="form-control" type="date" id="fromdate" name="fromdate" required="true">
+											<input class="form-control" type="date" id="fromdate" name="fromdate" value="<?php echo date('Y-m-d'); ?>" required="true">
 										</div>
 										
 										<div class="form-group">
 											<label>To Date</label>
-											<input class="form-control" type="date" id="todate" name="todate" required="true">
+											<input class="form-control" type="date" id="todate" name="todate" value="<?php echo date('Y-m-d'); ?>" required="true">
 										</div>
 										
 										<div class="form-group has-success">

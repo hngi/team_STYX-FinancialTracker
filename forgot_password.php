@@ -1,207 +1,151 @@
-<?php
-
-	include('includes/config.php');
-
-
-
-	if(isset($_POST['reset'])) {
-
-		$email = $_POST['email'];
-
-		$npword = $_POST['npword'];
-
-		$cpword = $_POST['cpword'];
-
-		$hash = md5($npword);
-
-		
-
-		if(!empty($email) && !empty($npword) && !empty($cpword)) {
-
-			$query = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");
-
-			
-
-			if(mysqli_num_rows($query) == 0) {
-
-				$_SESSION['error'] = "Email does not exist";
-
-				session_unset();
-
-			}
-
-			
-
-			elseif(!($npword === $cpword)) {
-
-				$_SESSION['error'] = "Passwords do not match!";
-
-				session_unset();
-
-			}
-
-
-
-			elseif(strlen($npword) < 6) {
-
-			    $_SESSION['error'] = "Password must be 6 characters or more ";
-
-			    session_unset();
-
-			}
-
-
-
-			else {
-
-		
-
-				$sql = "UPDATE users set pword = '$hash' WHERE email = '$email'";
-
-				$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
-
-				
-
-				if($result) {
-
-					$_SESSION['success'] = "You have successfully reset your password. <a href='login.php'>Click here to login</a>";
-
-					session_unset();
-
-				}
-
-			}
-
-		}
-
-	}
-
-
-
+<?php 
+  ob_start();
+  include('includes/config.php'); 
 ?>
 
-
-
-
-
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>STYX Finance Tracker</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
-	<title>STYX Finance Tracker || Reset Password</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
+  
+  <style type="text/css">
+    html,
+    body,
+    header,
+    .view {
+      height: 100%;
+    }
 
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    .mt-5{
+      font-size: 13px
+    }
 
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    @media (max-width: 768px) {
+      html,
+      body,
+      header,
+      .view {
+        height: 100%;
+      }
+      
+      .navbar {
+        background-color: #1C2331; 
+      }
 
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
+    }
 
+    @media (min-width: 768px) {
+      .title {
+        font-size: 50px;
+      }
+
+    }
+    
+    .navbar {
+      box-shadow: none;
+    }
+
+    .nav-link {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .nav-item {
+      padding-right: 30px;
+    }
+
+  </style>
 </head>
 
+<body>
+    
+  <?php include('includes/navbar.php'); ?>
+  
 
+  <div class="view full-page-intro" style="background-image: url('landing.jpg'); background-repeat: no-repeat; background-size: cover;">
 
-<body style="background-color: #071739;">
+    <div class="mask rgba-blue-light d-flex justify-content-center align-items-center">
 
+      <div class="container">
+        <div class="row wow fadeIn">
+          <div class="col-md-7 mb-4 white-text text-center text-md-left">
 
+            <h1 class="title font-weight-bold d-none d-md-block">STYX Finance Tracker</h1>
 
-	<div class="container">
+            <hr class="hr-light d-none d-md-block">
 
-		<div class="row d-flex justify-content-center mt-5">
+            <p class="h5 d-none d-md-block">
+              <strong>Be in charge of your money</strong>
+            </p>
+            <p class="mb-4 h5 d-none d-md-block">
+              <strong>Create a new Styx account and take charge</strong>
+            </p>
 
-			<div class="col-md-6">
+          </div>
 
-				
+          <div class="col-md-6 col-xl-5">
+            <div class="card mb-5 login-form">
+              <div class="card-body">
+                <form name="" action="includes/authentication.php" method="post">
 
-				<?php
+                  <h3 class="dark-grey-text text-center">
+                    <strong>FORGOT PASSWORD</strong>
+                  </h3>
+                  <hr>
 
-					if(isset($_SESSION['error'])){
+                  <div class="md-form">
+                    <i class="fas fa-envelope prefix grey-text"></i>
+                    <input type="email" name="email" class="form-control" required>
+                    <label for="form2">Email</label>
+                  </div>
+                  
+                  <div class="text-center">
+                    <button class="btn btn-indigo" type="submit" name="forgot">SUBMIT</button>
+                  </div>
 
-						echo "<div class='alert alert-danger'>".$_SESSION['error']."</div>";
+                  <div class="mt-5">
+                  
+                    <p class="text-center">I know my password now <a href="index.php" class="signUpLink">Sign In</a> || Don't have an account? <a href="signup.php" class="signUpLink">Sign Up</a></p>
+                  
+                  </div>
+                  
+                </form>
 
-					}
+              </div>
 
-				?>
+            </div>
 
+          </div>
 
+        </div>
 
-				<?php
+      </div>
 
-					if(isset($_SESSION['success'])){
+    </div>
 
-						echo "<div class='alert alert-success'>".$_SESSION['success']."</div>";
+  </div>
+  
 
-					}
-
-				?>
-
-
-
-				<div class="card">
-
-					<form class="p-5" method="post" action="">
-
-						<p class="h4 mb-4 text-center">Reset Password</p>
-
-
-
-						<label for="New Password">Email Address</label>
-
-						<input type="email" id="exampleForm2" class="form-control mb-4" placeholder="Enter registered email" name="email" required>
-
-						
-
-						<label for="New Password">New Password</label>
-
-						<input type="password" id="exampleForm2" class="form-control mb-4" placeholder="Enter new password" name="npword" required>
-
-						
-
-						<label for="Confirm Password">Confirm New Password</label>
-
-						<input type="password" id="exampleForm2" class="form-control mb-4" placeholder="Confirm new password" name="cpword" required>
-
-						
-
-						<button class="btn btn-info btn-block my-4" type="submit" name="reset">Reset</button>
-
-					
-
-					</form>
-
-				</div>
-
-				
-
-			</div>
-
-		</div>
-
-	</div>
-
-
-
-
-
-
-
-<!-- JQuery -->
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-<!-- Bootstrap tooltips -->
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-
-<!-- Bootstrap core JavaScript -->
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-<!-- MDB core JavaScript -->
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
-
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+  </script>
 </body>
 
 </html>

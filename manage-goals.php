@@ -1,18 +1,41 @@
 <?php
 
 	session_start();
-
 	error_reporting(0);
-
 	include('includes/config.php');
 
-	
-
 	if (strlen($_SESSION['id'] == 0)) {
-
   		header('location:login.php');
 
   	} else {
+
+        if (isset($_POST['submit'])) {
+            
+            
+            $userid = $_SESSION['id'];
+            $goalTitle = $_POST['goal-title'];
+            $goalCategory =$_POST['goal-category'];
+            $goalAmount = $_POST['goal-amount'];
+            $goalDate = $_POST['goal-date'];
+
+            if(!preg_match('/^[0-9]*$/', $goalAmount)) {
+				echo "<script>alert('Please enter a valid amount.');</script>";
+				echo "<script>window.location.href='add-expense.php'</script>";
+
+            }
+            else {
+                $query = mysqli_query($conn, "INSERT INTO goaltracker(userId,goalTitle,goalCategory,goalAmount,goalDate) VALUE ('$userid','$goalTitle','$goalCategory','$goalAmount', '$goalDate')");
+
+
+                if($query) {
+					echo "<script>alert('Goal has been added');</script>";
+					echo "<script>window.location.href='dashboard.php'</script>";
+			
+				} else {
+					echo "<script>alert('Something went wrong. Please try again');</script>";
+				}
+            }
+        }
 
 ?>
 
@@ -109,173 +132,75 @@
         form .btn {
 
             display: block;
-
             width: 70%;
-
             margin: 60px auto;
 
         }
 
         .goal-progress {
-
             float: right;
-
             font-weight: bolder;
-
             font-size: 1.2em;
 
         }
 
         .addAmount input{
-
             color: black;
-
             width: 150px
 
         }
 
         .addAmount-btn {
-
             background-color: rgb(166, 223, 166);
-
             color: white;
-
             margin-bottom: 20px;
-
         }
 
 	</style>
-
-
-
 </head>
 
 
 
 <body>
-
-
-
 	<?php include_once('includes/header.php');?>
-
-	<?php include_once('includes/sidebar.php');?>
-
-		
-
+    <?php include_once('includes/sidebar.php');?>
+    
     <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
-
         <div class="row">
-
 			<ol class="breadcrumb">
-
 				<li><a href="dashboard.php">
-
 					<em class="fa fa-home"></em>
-
 				</a></li>
-
 				<li class="active">Manage Goals</li>
-
 			</ol>
-
         </div>
 
-        
-
         <div class="container-fluid">
-
             <div class="goal-container">
-
                 <h3>Add Goal</h3>
-
-
-
                 <div class="current-goal">
-
-                    <form >
-
+                    <form role="form" method="post" action="">
                         <section class="form">
-
-                        <span>
-
-                        <label for="goal-title">Goal Title</label>
-
-                        <input type="text" name="goal-title" placeholder="Enter Goal Title here..." value="" id="goal-title">
-
-                        </span>
-
-                        <span>
-
-                        <label for="goal-amount">Goal Amount</label>
-
-                        <input type="number" name="goal-amount" placeholder="Enter Goal amount here..." value="" id="amount_input">
-
-                        </span>
-
-                        <span>
-
-                        <label for="goal-title">Goal Category</label>
-
-                        <select name="goal-category" id="goal-category">
-
-                            <option value="important">Important</option>
-
-                            <option value="trivial">Trivial</option>
-
-                        </select>
-
-                        </span>
-
-                        <span>
-
-                        <label for="date-due">Date Due</label>
-
-                        <input type="date" name="date-due" value="" id="dateDue">
-
-                        </span>
-
+                            <span> 
+                                <label for="goal-title">Goal Title</label>
+                                <input type="text" name="goal-title" placeholder="Goal Title here..." required="true">
+                            </span>
+                            <span>
+                                <label for="goal-title">Goal Category</label>
+                                    <input type="text" name="goal-category" placeholder="Fill In Category" required="true">
+                            </span>
+                            <span>
+                                <label for="goal-amount">Goal Amount</label>
+                                <input type="number" name="goal-amount" placeholder="Enter Goal amount..." required="true">
+                            </span>
+                            <span>
+                                <label for="date-due">Date Due</label>
+                                <input type="date" name="goal-date" required="true">
+                            </span>
                         </section>
-
-
-
-                        <input type="button" value="Add Goal" class="btn btn-info">
-
-
-
-                        <section >
-
-                                <h3> Current Goal Statistics</h3>
-
-                                <div class="addAmount"> 
-
-                                    <input type="number" placeholder="Enter Amount" id="addAmount" value="">
-
-                                    <input type="button" value="Add amount" style="width: 150px" class="addAmount-btn"> </div>
-
-                                <p>
-
-                                <span class="goal-title text-bold">Goal Title</span><span class="goal-progress text-info"> 0%</span>
-
-                                </p>
-
-                                <p class="amount"> Amount: &#8358<span id="amountSaved">0</span>/ &#8358 <span class ="totalAmount">0</span></p>
-
-                                <p>Date due: <span class="dateDue"></span></p>
-
-                                <div class="progress">
-
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-
-                                    </div>
-
-                                  </div>
-
-                                
-
-                            </section>
-
+    
+						    <button type="submit" class="btn btn-primary" name="submit">Add</button>
                     </form>
-
                 </div>
 
             </div>

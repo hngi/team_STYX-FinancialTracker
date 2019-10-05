@@ -23,6 +23,7 @@
     .view {
       height: 100%;
     }
+
     @media (max-width: 768px) {
       html,
       body,
@@ -30,40 +31,51 @@
       .view {
         height: 1000px;
       }
+
       .navbar {
         background-color: #1C2331; 
       }
+
       .title {
         font-size: 40px;
         margin-top: 50px;
       }
+
       .register-form {
         margin-top: -50px;
       }
     
     }
+
     @media (min-width: 768px) {
       .title {
         font-size: 50px;
         margin-top: 150px;
       }
+
       .register-form {
         margin-top: 50px;
       }
+
     }
+
     .top-nav-collapse {
       background-color: #1C2331; 
     }
+
     .navbar {
       box-shadow: none;
     }
+
     .nav-link {
       font-weight: bold;
       font-size: 18px;
     }
+
     .nav-item {
       padding-right: 30px;
     }
+
   </style>
 </head>
 
@@ -130,6 +142,7 @@
                         echo "<div class='alert alert-danger'>" .$_SESSION['errors']['fname']. "</div>";
                         unset($_SESSION['errors']['fname']);
                     }
+
                   ?>
 
                   <div class="md-form">
