@@ -15,6 +15,7 @@
 		$email_from ='teamstynxcontact@gmail.com';
 		$email_subject = 'New Contact Form Submission';
 		$email_body = "Username: $name. \n".
+
 					"User Email: $email. \n". 
 					"User Message: $message. \n";
 
@@ -22,13 +23,12 @@
 
 		$headers = "From: $email_from \r\n";
 		$headers .= "Reply-To: $email \r\n";
-		
 		mail($to, $email_subject,$email_body,$headers);
 				header("Location: contact.php?signup=success");
 				exit();
-				}
-			
+				}			
 	}	
+
 
 
 ?>
@@ -58,8 +58,10 @@
 		}
 
     #container {
+
       width: 70%;
       margin-left: 15%;
+
     }
 		#row {
 			margin-top: 2%;
@@ -84,6 +86,7 @@
 </head>
 
 <body style="padding-top:0px">
+
 		<div class="row" style="background-color: #071739">
 			<div class="col-lg-12 col-md-12 col-sm-12 c0l-xs-12">
 				<div class="head" id="head">
@@ -117,6 +120,7 @@
 									</div>
 
 									<div class="form-group has-success">
+
 										<button type="submit" class="btn btn-primary btn-block" id="submitcontact"name="submitcontact">Submit</button>
 										
 			<?php
@@ -164,6 +168,3 @@
 
 </body>
 </html>
-
-
-
