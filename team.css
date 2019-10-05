@@ -29,7 +29,7 @@ img{
  .card-body{
      border-radius: 20%;
      height: 90px;
-     
+     background: #f3f3f3;     
  }
  .card-body>a{
      margin: auto;
