@@ -28,8 +28,8 @@ img{
 .crd{
    width: 170px;
    margin-bottom: 15px;
-   border-top: 1px solid black;
-   border-bottom: 1px solid black; 
+   /*border-top: 1px solid black;
+   border-bottom: 1px solid black;*/
    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.19) 
 }
  .card-body{
